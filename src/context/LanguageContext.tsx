@@ -21,7 +21,6 @@ const translations = {
     'home.bio_title': 'Bio',
     'home.born': 'Born in HoChiMinh City (胡志明市), Vietnam.',
     'home.master': 'Completed the Master\'s Program at Hutech University.',
-    'home.bytedance': 'Worked at ByteDance as a Product Engineer.',
     'home.freelance': 'Started journey as a Freelance Developer.',
     'home.love_title': 'I ♥',
     'home.love_desc': 'Music, Drawing, Calligraphy, Photography.',
