@@ -27,7 +27,7 @@
 
 @layer base {
   body {
-    @apply bg-paper text-ink transition-colors duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)];
+    @apply bg-paper text-ink font-sans transition-colors duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)];
     letter-spacing: -0.015em;
     line-height: 1.6;
     text-align: left;
