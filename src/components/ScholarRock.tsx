@@ -46,7 +46,7 @@ const CustomModel: React.FC<{ url: string }> = ({ url }) => {
     <primitive 
       ref={meshRef}
       object={clonedScene} 
-      scale={0.5} 
+      scale={0.8} 
       position={[0, -1, 0]} 
       rotation={[0, -Math.PI / 4, 0]} // Rotate model to face the camera nicely
     />
@@ -102,7 +102,7 @@ const ScholarRock: React.FC = () => {
           enablePan={false} 
           minPolarAngle={0} 
           maxPolarAngle={Math.PI / 2} 
-          autoRotate={false} 
+          autoRotate={true} 
         />
       </Canvas>
     </div>

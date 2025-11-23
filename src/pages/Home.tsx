@@ -79,20 +79,20 @@ const Home: React.FC = () => {
           {t('home.bio_title')}
         </h3>
         <div className="space-y-4">
-          <div className="flex gap-6 group hover:bg-white/50 dark:hover:bg-white/5 p-2 rounded-lg transition-colors -mx-2">
-            <span className="font-bold text-ink dark:text-stone-200 font-serif text-base pt-1 min-w-[4rem]">2004</span>
+          <div className="flex gap-3 group hover:bg-white/50 dark:hover:bg-white/5 p-2 rounded-lg transition-colors -mx-2">
+            <span className="font-bold text-ink dark:text-stone-200 font-serif text-base pt-1 min-w-[3rem]">2004</span>
             <span className="text-stone-700 dark:text-stone-300 text-lg font-sans">{t('home.born')}</span>
           </div>
-          <div className="flex gap-6 group hover:bg-white/50 dark:hover:bg-white/5 p-2 rounded-lg transition-colors -mx-2">
-            <span className="font-bold text-ink dark:text-stone-200 font-serif text-base pt-1 min-w-[4rem]">2020</span>
+          <div className="flex gap-3 group hover:bg-white/50 dark:hover:bg-white/5 p-2 rounded-lg transition-colors -mx-2">
+            <span className="font-bold text-ink dark:text-stone-200 font-serif text-base pt-1 min-w-[3rem]">2020</span>
             <span className="text-stone-700 dark:text-stone-300 text-lg font-sans">{t('home.master')}</span>
           </div>
-          {/* <div className="flex gap-6 group hover:bg-white/50 dark:hover:bg-white/5 p-2 rounded-lg transition-colors -mx-2">
-            <span className="font-bold text-ink dark:text-stone-200 font-serif text-base pt-1 min-w-[4rem]">2021</span>
+          {/* <div className="flex gap-3 group hover:bg-white/50 dark:hover:bg-white/5 p-2 rounded-lg transition-colors -mx-2">
+            <span className="font-bold text-ink dark:text-stone-200 font-serif text-base pt-1 min-w-[3rem]">2021</span>
             <span className="text-stone-700 dark:text-stone-300 text-lg font-sans">{t('home.bytedance')}</span>
           </div> */}
-          <div className="flex gap-6 group hover:bg-white/50 dark:hover:bg-white/5 p-2 rounded-lg transition-colors -mx-2">
-            <span className="font-bold text-ink dark:text-stone-200 font-serif text-base pt-1 min-w-[4rem]">2025</span>
+          <div className="flex gap-3 group hover:bg-white/50 dark:hover:bg-white/5 p-2 rounded-lg transition-colors -mx-2">
+            <span className="font-bold text-ink dark:text-stone-200 font-serif text-base pt-1 min-w-[3rem]">2025</span>
             <span className="text-stone-700 dark:text-stone-300 text-lg font-sans">{t('home.freelance')}</span>
           </div>
         </div>
