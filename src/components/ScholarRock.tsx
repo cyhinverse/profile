@@ -60,7 +60,7 @@ const ScholarRock: React.FC = () => {
         shadows 
         camera={{ position: [10, 10, 10], fov: 25 }} 
         dpr={[1, 2]}
-        gl={{ powerPreference: "high-performance", antialias: false }}
+        gl={{ powerPreference: "high-performance", antialias: true }}
       >
         
         {/* Lighting Setup for Clarity and Realism */}
