@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GuoYing | Digital Craftsman</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎵</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700;800&display=swap"
+    rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["M PLUS Rounded 1c", "sans-serif"], // The craftz.dog font!
+            serif: ["M PLUS Rounded 1c", "sans-serif"], // Use same for consistency or keep a serif if needed
+            brush: ["M PLUS Rounded 1c", "sans-serif"], // Keep consistent
+          },
+          colors: {
+            paper: "#fcfaf7", // Rice Paper (Warmer)
+            ink: "#2b2b2b", // Soft Charcoal Ink (Not pure black)
+            cinnabar: "#8c2f25", // Traditional Seal Red (Accent)
+            "cinnabar-light": "#b94b40",
+            stone: {
+              50: "#f9f8f6",
+              100: "#f2efeb",
+              200: "#e6e0d8",
+              300: "#d1c5b8",
+              400: "#b0a090",
+              500: "#8f7e6d",
+              600: "#6e5f50",
+              700: "#52463a",
+              800: "#3d342b",
+              900: "#26201a",
+            },
+          },
+          backdropBlur: {
+            xs: "2px",
+          },
+          animation: {
+            "spin-slow": "spin 8s linear infinite",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body {
+      background-color: #fcfaf7;
+      color: #2b2b2b;
+      transition: background-color 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+        color 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .dark body {
+      background-color: #1c1917;
+      /* Warm Dark Stone */
+      color: #e7e5e4;
+    }
+
+    ::selection {
+      background: rgba(140, 47, 37, 0.2);
+      /* Cinnabar selection */
+      color: #8c2f25;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #d1c5b8;
+      border-radius: 10px;
+    }
+
+    .dark ::-webkit-scrollbar-thumb {
+      background-color: #44403c;
+    }
+  </style>
+  <script type="importmap">
+      {
+        "imports": {
+          "react": "https://aistudiocdn.com/react@^19.2.0",
+          "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+          "react/": "https://aistudiocdn.com/react@^19.2.0/",
+          "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
+          "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+          "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
+          "@react-three/fiber": "https://aistudiocdn.com/@react-three/fiber@^9.4.0",
+          "@react-three/drei": "https://aistudiocdn.com/@react-three/drei@^10.7.7",
+          "three": "https://aistudiocdn.com/three@^0.181.2",
+          "clsx": "https://aistudiocdn.com/clsx@^2.1.1"
+        }
+      }
+    </script>
+  <link rel="stylesheet" href="/index.css" />
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/index.tsx"></script>
+</body>
+
+</html>
