@@ -56,31 +56,20 @@ const CustomModel: React.FC<{ url: string }> = ({ url }) => {
 const ScholarRock: React.FC = () => {
   return (
     <div className="h-[500px] w-full cursor-move active:cursor-grabbing transition-all duration-500">
-      <Canvas 
-        shadows 
-        camera={{ position: [10, 10, 10], fov: 25 }} 
-        dpr={[1, 2]}
-        gl={{ preserveDrawingBuffer: true, powerPreference: "high-performance" }}
-      >
+      <Canvas shadows camera={{ position: [10, 10, 10], fov: 25 }} dpr={[1, 2]}>
         
         {/* Lighting Setup for Clarity and Realism */}
-        {/* Reduced ambient light for higher contrast and richer colors */}
-        <ambientLight intensity={0.4} />
-        
-        {/* Main directional light - Key light */}
+        <ambientLight intensity={0.7} />
         <directionalLight 
           position={[10, 10, 5]} 
-          intensity={2.5} 
+          intensity={2} 
           color="#fff7ed" 
           castShadow 
           shadow-mapSize={[1024, 1024]}
-          shadow-bias={-0.0001}
         />
-        
-        {/* Fill light to soften shadows slightly but keep them dark enough */}
         <spotLight 
           position={[-5, 10, -5]} 
-          intensity={1.5} 
+          intensity={2} 
           color="#ffffff" 
           angle={0.5} 
           penumbra={1} 
@@ -99,11 +88,11 @@ const ScholarRock: React.FC = () => {
         
         <ContactShadows 
           position={[0, -1.5, 0]} 
-          opacity={0.7} 
+          opacity={0.6} 
           scale={10} 
-          blur={2} 
+          blur={1.5} 
           far={4} 
-          resolution={256} 
+          resolution={512} 
           color="#000000" 
         />
 
