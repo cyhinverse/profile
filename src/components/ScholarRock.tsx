@@ -56,7 +56,12 @@ const CustomModel: React.FC<{ url: string }> = ({ url }) => {
 const ScholarRock: React.FC = () => {
   return (
     <div className="h-[500px] w-full cursor-move active:cursor-grabbing transition-all duration-500">
-      <Canvas shadows camera={{ position: [10, 10, 10], fov: 25 }} dpr={[1, 2]}>
+      <Canvas 
+        shadows 
+        camera={{ position: [10, 10, 10], fov: 25 }} 
+        dpr={[1, 2]}
+        gl={{ powerPreference: "high-performance", antialias: false, stencil: false, depth: false }}
+      >
         
         {/* Lighting Setup for Clarity and Realism */}
         <ambientLight intensity={0.7} />
@@ -65,7 +70,7 @@ const ScholarRock: React.FC = () => {
           intensity={2} 
           color="#fff7ed" 
           castShadow 
-          shadow-mapSize={[1024, 1024]}
+          shadow-mapSize={[512, 512]}
         />
         <spotLight 
           position={[-5, 10, -5]} 
@@ -90,10 +95,11 @@ const ScholarRock: React.FC = () => {
           position={[0, -1.5, 0]} 
           opacity={0.6} 
           scale={10} 
-          blur={1.5} 
+          blur={2} 
           far={4} 
-          resolution={512} 
+          resolution={256} 
           color="#000000" 
+          frames={1}
         />
 
         <OrbitControls 
