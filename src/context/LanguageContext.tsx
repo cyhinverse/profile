@@ -20,7 +20,7 @@ const translations = {
     'home.portfolio_btn': 'My Portfolio',
     'home.bio_title': 'Bio',
     'home.born': 'Born in HoChiMinh City (胡志明市), Vietnam.',
-    'home.master': 'Completed the Master\'s Program at Hutech University.',
+    'home.master': 'Started studying at Hutech University.',
     'home.freelance': 'Started journey as a Freelance Developer.',
     'home.love_title': 'I ♥',
     'home.love_desc': 'Music, Drawing, Calligraphy, Photography.',
