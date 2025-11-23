@@ -1,4 +1,4 @@
-import matter from 'gray-matter';
+import yaml from 'js-yaml';
 
 export interface MarkdownPost {
   slug: string;
@@ -10,6 +10,22 @@ export interface MarkdownPost {
   body: string;
   [key: string]: any;
 }
+
+const parseFrontmatter = (text: string) => {
+  const match = text.match(/^---\n([\s\S]*?)\n---/);
+  if (!match) {
+    return { data: {}, content: text };
+  }
+  
+  try {
+    const data = yaml.load(match[1]) as any;
+    const content = text.slice(match[0].length);
+    return { data, content };
+  } catch (e) {
+    console.error('Error parsing YAML frontmatter:', e);
+    return { data: {}, content: text };
+  }
+};
 
 export const getContent = async (type: 'works' | 'writing'): Promise<MarkdownPost[]> => {
   let modules;
@@ -23,12 +39,12 @@ export const getContent = async (type: 'works' | 'writing'): Promise<MarkdownPos
 
   for (const path in modules) {
     const rawContent = await modules[path]();
-    const { data, content } = matter(rawContent);
+    const { data, content } = parseFrontmatter(rawContent);
     const slug = path.split('/').pop()?.replace('.md', '') || '';
 
     posts.push({
       slug,
-      title: data.title,
+      title: data.title || 'Untitled',
       date: data.date ? new Date(data.date).toISOString() : new Date().toISOString(),
       thumbnail: data.thumbnail,
       description: data.description,
@@ -45,11 +61,11 @@ export const getContent = async (type: 'works' | 'writing'): Promise<MarkdownPos
 export const getPostBySlug = async (type: 'works' | 'writing', slug: string): Promise<MarkdownPost | null> => {
   try {
     const module = await import(`../content/${type}/${slug}.md?raw`);
-    const { data, content } = matter(module.default);
+    const { data, content } = parseFrontmatter(module.default);
     
     return {
       slug,
-      title: data.title,
+      title: data.title || 'Untitled',
       date: data.date ? new Date(data.date).toISOString() : new Date().toISOString(),
       thumbnail: data.thumbnail,
       description: data.description,
