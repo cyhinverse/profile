@@ -61,7 +61,7 @@ const Home: React.FC = () => {
         <h3 className="text-2xl font-serif font-bold underline decoration-2 decoration-cinnabar/30 dark:decoration-cinnabar-light/30 underline-offset-8 mb-6 text-ink dark:text-stone-100">
           {t('home.work_title')}
         </h3>
-        <p className="text-stone-700 dark:text-stone-300 leading-loose text-lg mb-6 text-justify font-sans">
+        <p className="text-stone-700 dark:text-stone-300 leading-relaxed text-lg mb-6 font-sans">
           {t('home.work_desc')}
         </p>
         <div className="flex justify-center my-10">
