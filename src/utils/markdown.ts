@@ -30,9 +30,9 @@ const parseFrontmatter = (text: string) => {
 export const getContent = async (type: 'works' | 'writing'): Promise<MarkdownPost[]> => {
   let modules;
   if (type === 'works') {
-    modules = import.meta.glob('../content/works/*.md', { as: 'raw' });
+    modules = import.meta.glob('../content/works/*.md', { query: '?raw', import: 'default' });
   } else {
-    modules = import.meta.glob('../content/writing/*.md', { as: 'raw' });
+    modules = import.meta.glob('../content/writing/*.md', { query: '?raw', import: 'default' });
   }
 
   const posts: MarkdownPost[] = [];
