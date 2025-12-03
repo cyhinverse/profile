@@ -79,10 +79,11 @@ const MusicPlayer: React.FC = () => {
   };
   
   return (
-    <div className="fixed bottom-6 left-6 z-[9999] flex flex-col items-start gap-3 pointer-events-auto">
+    <div className="fixed bottom-6 left-6 z-9999 flex flex-col items-start gap-3 pointer-events-auto">
       <audio 
         ref={audioRef} 
         onEnded={nextMusic}
+        preload="none"
       />
       
       {/* Playlist Popup */}
@@ -169,7 +170,8 @@ const MusicPlayer: React.FC = () => {
            <div className="flex items-center gap-2">
              <button 
                onClick={prevMusic}
-               className="text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors"
+               className="text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors p-2"
+               aria-label="Previous song"
              >
                <SkipBack size={12} fill="currentColor" />
              </button>
@@ -177,6 +179,7 @@ const MusicPlayer: React.FC = () => {
              <button 
                onClick={togglePlay}
                className="text-stone-800 dark:text-stone-200 hover:text-red-700 transition-colors font-serif font-bold text-sm w-16 text-center flex items-center justify-center gap-1"
+               aria-label={isPlaying ? "Pause" : "Play"}
              >
                {isPlaying ? <Pause size={12} fill="currentColor" /> : <Play size={12} fill="currentColor" />}
                <span className="text-xs">{isPlaying ? "PLAYING" : "PAUSED"}</span>
@@ -184,7 +187,8 @@ const MusicPlayer: React.FC = () => {
 
              <button 
                onClick={nextMusic}
-               className="text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors"
+               className="text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors p-2"
+               aria-label="Next song"
              >
                <SkipForward size={12} fill="currentColor" />
              </button>
@@ -215,6 +219,7 @@ const MusicPlayer: React.FC = () => {
             onClick={() => setShowList(!showList)}
             className={`transition-colors ${showList ? 'text-red-600' : 'text-stone-400 hover:text-stone-600 dark:hover:text-stone-200'}`}
             title="Playlist"
+            aria-label="Toggle playlist"
           >
             <ListMusic size={14} />
           </button>
@@ -222,6 +227,7 @@ const MusicPlayer: React.FC = () => {
             onClick={toggleMute}
             className="text-stone-400 hover:text-stone-600 dark:hover:text-stone-200 transition-colors"
             title={isMuted ? "Unmute" : "Mute"}
+            aria-label={isMuted ? "Unmute" : "Mute"}
           >
             {isMuted ? <VolumeX size={14} /> : <Volume2 size={14} />}
           </button>

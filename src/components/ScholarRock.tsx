@@ -1,7 +1,7 @@
 import React, { useRef, Suspense, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Float, useGLTF, Environment, ContactShadows, Center, Html, OrbitControls } from '@react-three/drei';
-import * as THREE from 'three';
+import { Group } from 'three';
 
 declare global {
   namespace JSX {
@@ -28,7 +28,7 @@ const Loader = () => {
 
 const CustomModel: React.FC<{ url: string }> = ({ url }) => {
   const { scene } = useGLTF(url);
-  const meshRef = useRef<THREE.Group>(null);
+  const meshRef = useRef<Group>(null);
   
   const clonedScene = useMemo(() => {
     const cloned = scene.clone();
@@ -59,8 +59,8 @@ const ScholarRock: React.FC = () => {
       <Canvas 
         shadows 
         camera={{ position: [10, 10, 10], fov: 25 }} 
-        dpr={[1, 2]}
-        gl={{ powerPreference: "high-performance", antialias: true }}
+        dpr={[1, 1.5]}
+        gl={{ powerPreference: "high-performance", antialias: true, stencil: false, depth: true }}
       >
         
         {/* Lighting Setup for Clarity and Realism */}
@@ -97,7 +97,8 @@ const ScholarRock: React.FC = () => {
           scale={10} 
           blur={2} 
           far={4} 
-          resolution={256} 
+          resolution={512} 
+          smooth={false}
           color="#000000" 
           frames={1}
         />
@@ -116,3 +117,5 @@ const ScholarRock: React.FC = () => {
 };
 
 export default ScholarRock;
+
+useGLTF.preload('/computer.glb');

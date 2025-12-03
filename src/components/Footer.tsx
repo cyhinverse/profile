@@ -8,9 +8,9 @@ const Footer: React.FC = () => {
   return (
     <footer className="mt-32 pb-10 text-center text-stone-400 dark:text-stone-600 text-sm">
       <div className="flex justify-center space-x-8 mb-6">
-        <a href="https://github.com/cyhinverse" className="hover:text-jade transition-colors transform hover:scale-110 duration-300"><Github size={20} strokeWidth={1.5} /></a>
-        <a href="#" className="hover:text-jade transition-colors transform hover:scale-110 duration-300"><Linkedin size={20} strokeWidth={1.5} /></a>
-        <a href="#"  className="hover:text-jade transition-colors transform hover:scale-110 duration-300"><Mail size={20} strokeWidth={1.5} /></a>
+        <a href="https://github.com/cyhinverse" aria-label="GitHub Profile" className="hover:text-jade transition-colors transform hover:scale-110 duration-300"><Github size={20} strokeWidth={1.5} /></a>
+        <a href="#" aria-label="LinkedIn Profile" className="hover:text-jade transition-colors transform hover:scale-110 duration-300"><Linkedin size={20} strokeWidth={1.5} /></a>
+        <a href="#" aria-label="Email Contact" className="hover:text-jade transition-colors transform hover:scale-110 duration-300"><Mail size={20} strokeWidth={1.5} /></a>
       </div>
       <p className="font-serif opacity-80 tracking-wide">
         {t('footer.text')}

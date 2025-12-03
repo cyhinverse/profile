@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
           })}
         </div>
 
-        <div className="w-[1px] h-4 bg-stone-300 dark:bg-stone-700 mx-1 shrink-0" />
+        <div className="w-px h-4 bg-stone-300 dark:bg-stone-700 mx-1 shrink-0" />
 
         <div className="flex items-center gap-1 pr-1 shrink-0">
           <button

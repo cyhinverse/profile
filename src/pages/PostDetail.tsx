@@ -63,7 +63,7 @@ const PostDetail: React.FC = () => {
 
         <Section delay={0.2}>
           {/* Blog Content Container mimicking a page of text */}
-          <div className="bg-white dark:bg-stone-800/50 p-8 md:p-12 rounded-2xl shadow-sm ring-1 ring-stone-100 dark:ring-white/5">
+          <div className="bg-white dark:bg-stone-800/50 p-5 md:p-12 rounded-2xl shadow-sm ring-1 ring-stone-100 dark:ring-white/5">
             <MarkdownRenderer content={post.body} />
             
             <div className="mt-16 pt-8 border-t border-stone-100 dark:border-stone-700 text-center font-serif italic text-stone-400">

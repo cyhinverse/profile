@@ -6,9 +6,9 @@ import { getContent, MarkdownPost } from '../utils/markdown';
 import { format } from 'date-fns';
 
 const PostItem: React.FC<{ post: MarkdownPost }> = ({ post }) => (
-  <Link to={`/posts/${post.slug}`} className="block group cursor-pointer mb-10">
+  <Link to={`/posts/${post.slug}`} className="block group cursor-pointer mb-8 md:mb-10">
     <div className="flex flex-col sm:flex-row sm:items-baseline justify-between mb-2">
-       <h4 className="text-xl font-serif font-bold text-ink dark:text-stone-100 group-hover:text-jade transition-colors group-hover:underline decoration-1 underline-offset-4">
+       <h4 className="text-lg md:text-xl font-serif font-bold text-ink dark:text-stone-100 group-hover:text-jade transition-colors group-hover:underline decoration-1 underline-offset-4">
         {post.title}
       </h4>
       <span className="text-xs font-mono text-stone-400 shrink-0 sm:ml-4 mt-1 sm:mt-0">

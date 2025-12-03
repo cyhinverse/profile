@@ -6,7 +6,7 @@ export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
       server: {
-        port: 3000,
+        port: 3001,
         host: '0.0.0.0',
       },
       plugins: [react()],
@@ -17,6 +17,26 @@ export default defineConfig(({ mode }) => {
       resolve: {
         alias: {
           '@': path.resolve(__dirname, '.'),
+        }
+      },
+      build: {
+        target: 'esnext',
+        minify: 'terser',
+        cssMinify: true,
+        terserOptions: {
+          compress: {
+            drop_console: true,
+            drop_debugger: true,
+          },
+        },
+        rollupOptions: {
+          output: {
+            manualChunks: {
+              'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+              'three-vendor': ['three', '@react-three/fiber', '@react-three/drei'],
+              'framer-motion': ['framer-motion'],
+            }
+          }
         }
       }
     };

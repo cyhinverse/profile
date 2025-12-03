@@ -21,7 +21,7 @@ const ProjectCard: React.FC<{ project: MarkdownPost; buttonText: string }> = ({ 
       <p className="text-base text-stone-600 dark:text-stone-400 font-light mt-1 line-clamp-2">
         {project.description}
       </p>
-      <span className="inline-block mt-3 text-xs font-medium text-jade opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+      <span className="inline-block mt-3 text-xs font-medium text-jade opacity-100 md:opacity-0 transform translate-y-0 md:translate-y-2 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-300">
         {buttonText} →
       </span>
     </div>
@@ -48,7 +48,7 @@ const Works: React.FC = () => {
         </h3>
       </Section>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
         {projects.map((project, index) => (
           <Section key={project.slug} delay={index * 0.1}>
             <ProjectCard project={project} buttonText={t('works.read_more')} />
