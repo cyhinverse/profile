@@ -16,7 +16,7 @@ const translations = {
     'home.greeting': 'Hello, I\'m an indie developer based in Vietnam :>',
     'home.role': 'Digital Craftsman ( Software Developer / Student )',
     'home.work_title': 'Work',
-    'home.work_desc': 'Hello everyone, my name is Anh. I am 21 years old and currently a student at HUTECH University, set to graduate in the 2025–2026 academic year with a major in Information Technology. My career aspiration is to become a full-stack developer. I am dedicated to addressing various client needs and providing reliable technical solutions through coding.This is the first blog I have created to share the knowledge and learning experiences I have gained over the past four years. Thank you for visiting my website. I sincerely appreciate your support.',
+    'home.work_desc': 'Hello everyone, my name is Anh. I am 21 years old and currently a student at HUTECH University, set to graduate in the 2025–2026 academic year with a major in Information Technology. My career aspiration is to become a Software Engineering. I am dedicated to addressing various client needs and providing reliable technical solutions through coding.This is the first blog I have created to share the knowledge and learning experiences I have gained over the past four years. Thank you for visiting my website. I sincerely appreciate your support.',
     'home.portfolio_btn': 'My Portfolio',
     'home.bio_title': 'Bio',
     'home.born': 'Born in HoChiMinh City (胡志明市), Vietnam.',
