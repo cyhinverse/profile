@@ -3,11 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Volume2, VolumeX, Play, Pause, SkipForward, SkipBack, ListMusic, Music } from 'lucide-react';
 
 const MusicPlayer: React.FC = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(false);
   const [currentMusic, setCurrentMusic] = useState(0);
   const [showList, setShowList] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
+  const autoPlayBlocked = useRef(false);
   
   const listMusic = [
     {
@@ -34,13 +35,56 @@ const MusicPlayer: React.FC = () => {
     }
   }, []);
 
+  // Retry playback on user interactions
+  useEffect(() => {
+    const events = ['click', 'scroll', 'keydown', 'touchstart', 'mousedown'];
+    
+    const handleInteraction = () => {
+      // Try to play if we are logically playing OR if we were blocked from autoplaying
+      if (audioRef.current && audioRef.current.paused && (isPlaying || autoPlayBlocked.current)) {
+        audioRef.current.play()
+          .then(() => {
+            // Unmute on successful interaction-triggered play
+            if (audioRef.current) {
+               audioRef.current.muted = false;
+               setIsMuted(false);
+            }
+            // Update state to playing and clear blocked flag
+            setIsPlaying(true);
+            autoPlayBlocked.current = false;
+            
+            // Playback started successfully, remove listeners
+            events.forEach(event => window.removeEventListener(event, handleInteraction));
+          })
+          .catch(() => {
+            // Failed, keep listening
+          });
+      }
+    };
+
+    events.forEach(event => window.addEventListener(event, handleInteraction, { passive: true }));
+
+    return () => {
+      events.forEach(event => window.removeEventListener(event, handleInteraction));
+    };
+  }, [isPlaying]);
+
   // Handle track changes
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.src = listMusic[currentMusic].url;
       audioRef.current.load();
+      // If we are supposed to be playing...
       if (isPlaying) {
-        audioRef.current.play().catch(e => console.log("Audio play failed:", e));
+        const playPromise = audioRef.current.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            // Autoplay blocked by browser policy
+            // We do NOT pause the UI anymore, as user requested "it must auto play".
+            // We just note it's blocked so interaction listener can fix it.
+            autoPlayBlocked.current = true;
+          });
+        }
       }
     }
   }, [currentMusic]);
@@ -83,7 +127,8 @@ const MusicPlayer: React.FC = () => {
       <audio 
         ref={audioRef} 
         onEnded={nextMusic}
-        preload="none"
+        preload="auto"
+        autoPlay
       />
       
       {/* Playlist Popup */}

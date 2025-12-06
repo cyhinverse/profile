@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import Section from '../components/Section';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
@@ -36,9 +37,14 @@ const Home: React.FC = () => {
     <div className="pt-4">
       <Section>
         <div className="bg-stone-200/30 dark:bg-stone-800/30 rounded-xl p-6 text-center mb-10 border border-stone-200/50 dark:border-white/5" style={{ transform: 'translateZ(0)' }}>
-          <p className="text-stone-700 dark:text-stone-300 text-xl font-serif italic">
+          <motion.p 
+            className="text-stone-700 dark:text-stone-300 text-xl font-serif italic inline-block p-1"
+            initial={{ clipPath: 'inset(0 100% 0 0)' }}
+            animate={{ clipPath: 'inset(0 -20% 0 0)' }}
+            transition={{ duration: 2.5, ease: "easeOut" }}
+          >
             {t('home.greeting')}
-          </p>
+          </motion.p>
         </div>
       </Section>
 

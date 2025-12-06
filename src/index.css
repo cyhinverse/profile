@@ -3,15 +3,15 @@
 @variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --font-sans: "M PLUS Rounded 1c", sans-serif;
-  --font-serif: "M PLUS Rounded 1c", sans-serif;
-  --font-brush: "M PLUS Rounded 1c", sans-serif;
+  --font-sans: "Outfit", sans-serif;
+  --font-serif: "Space Mono", monospace;
+  --font-brush: "Space Mono", monospace;
 
   --color-paper: #fcfaf7;
   --color-ink: #2b2b2b;
   --color-cinnabar: #8c2f25;
   --color-cinnabar-light: #b94b40;
-  
+
   --color-stone-50: #f9f8f6;
   --color-stone-100: #f2efeb;
   --color-stone-200: #e6e0d8;
@@ -24,7 +24,7 @@
   --color-stone-900: #26201a;
 
   --animate-spin-slow: spin 8s linear infinite;
-  
+
   --backdrop-blur-xs: 2px;
 }
 

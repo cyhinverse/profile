@@ -1,5 +1,5 @@
 import React, { useRef, Suspense, useMemo } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas } from '@react-three/fiber';
 import { Float, useGLTF, Environment, ContactShadows, Center, Html, OrbitControls } from '@react-three/drei';
 import { Group } from 'three';
 import { useInView } from 'framer-motion';
@@ -33,7 +33,6 @@ const CustomModel: React.FC<{ url: string }> = ({ url }) => {
   
   const clonedScene = useMemo(() => {
     const cloned = scene.clone();
-    // Enable shadows for all meshes in the model
     cloned.traverse((child) => {
       if ((child as any).isMesh) {
         (child as any).castShadow = true;
