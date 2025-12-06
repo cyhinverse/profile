@@ -8,11 +8,11 @@ interface SectionProps {
 
 const Section: React.FC<SectionProps> = ({ children, delay = 0 }) => (
   <motion.div
-    initial={{ y: 10, opacity: 0 }}
-    animate={{ y: 0, opacity: 1 }}
-    exit={{ y: -10, opacity: 0 }}
-    transition={{ duration: 0.6, delay, ease: "easeOut" }}
+    initial={{ opacity: 0, y: 10 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.4, delay, ease: "easeOut" }}
     className="mb-6"
+    style={{ willChange: 'opacity, transform', transform: 'translateZ(0)' }}
   >
     {children}
   </motion.div>

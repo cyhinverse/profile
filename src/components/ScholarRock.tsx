@@ -2,6 +2,7 @@ import React, { useRef, Suspense, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Float, useGLTF, Environment, ContactShadows, Center, Html, OrbitControls } from '@react-three/drei';
 import { Group } from 'three';
+import { useInView } from 'framer-motion';
 
 declare global {
   namespace JSX {
@@ -54,13 +55,18 @@ const CustomModel: React.FC<{ url: string }> = ({ url }) => {
 };
 
 const ScholarRock: React.FC = () => {
+  const containerRef = useRef(null);
+  const isInView = useInView(containerRef, { margin: "100px" });
+
   return (
-    <div className="h-[500px] w-full cursor-move active:cursor-grabbing transition-all duration-500">
+    <div ref={containerRef} className="h-[500px] w-full cursor-move active:cursor-grabbing transition-all duration-500">
       <Canvas 
         shadows 
         camera={{ position: [10, 10, 10], fov: 25 }} 
         dpr={[1, 1.5]}
-        gl={{ powerPreference: "high-performance", antialias: true, stencil: false, depth: true }}
+        gl={{ antialias: true, stencil: false, depth: true }}
+        frameloop={isInView ? "always" : "never"}
+        performance={{ min: 0.5 }}
       >
         
         {/* Lighting Setup for Clarity and Realism */}
@@ -84,7 +90,7 @@ const ScholarRock: React.FC = () => {
         <Environment preset="studio" />
 
         <Suspense fallback={<Loader />}>
-          <Float speed={2} rotationIntensity={0.1} floatIntensity={0.2} floatingRange={[-0.05, 0.05]}>
+          <Float speed={1} rotationIntensity={0.05} floatIntensity={0.1} floatingRange={[-0.02, 0.02]}>
             <Center>
                <CustomModel url="/computer.glb" />
             </Center>
@@ -92,13 +98,12 @@ const ScholarRock: React.FC = () => {
         </Suspense>
         
         <ContactShadows 
-          position={[0, -1.5, 0]} 
-          opacity={0.6} 
+          position={[0, -2, 0]} 
+          opacity={0.4} 
           scale={10} 
-          blur={2} 
+          blur={2.5} 
           far={4} 
-          resolution={512} 
-          smooth={false}
+          resolution={256} 
           color="#000000" 
           frames={1}
         />
@@ -109,7 +114,8 @@ const ScholarRock: React.FC = () => {
           enablePan={false} 
           minPolarAngle={0} 
           maxPolarAngle={Math.PI / 2} 
-          autoRotate={true} 
+          autoRotate={true}
+          autoRotateSpeed={0.5}
         />
       </Canvas>
     </div>
