@@ -1,5 +1,8 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import {
+  Link,
+  useLocation,
+} from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ThemeToggle from './ThemeToggle';
 import { useLanguage } from '../context/LanguageContext';
@@ -13,32 +16,38 @@ const navItems = [
 
 const Navbar: React.FC = () => {
   const location = useLocation();
-  const { t, language, toggleLanguage } = useLanguage();
+  const { t, language, toggleLanguage } =
+    useLanguage();
 
   const isPathActive = (path: string) => {
-    if (path === '/') return location.pathname === '/';
+    if (path === '/')
+      return location.pathname === '/';
     return location.pathname.startsWith(path);
   };
 
   return (
     <div className="fixed top-6 w-full z-50 flex justify-center pointer-events-none px-4">
-      <nav 
+      <nav
         className="pointer-events-auto flex items-center gap-1 p-1.5 rounded-full bg-white/80 dark:bg-stone-900/80 backdrop-blur-md border border-stone-200/50 dark:border-stone-700/30 shadow-sm ring-1 ring-black/5 dark:ring-white/5 transition-colors duration-500 max-w-full overflow-hidden"
-        style={{ transform: 'translateZ(0)', contain: 'layout style' }}
+        style={{
+          transform: 'translateZ(0)',
+          contain: 'layout style',
+        }}
       >
-        
         <div className="flex items-center">
           {navItems.map((item) => {
-            const isActive = isPathActive(item.path);
+            const isActive = isPathActive(
+              item.path,
+            );
             return (
               <Link
                 key={item.path}
                 to={item.path}
                 className={clsx(
-                  "relative px-3 md:px-4 py-2 rounded-full text-xs md:text-sm font-medium transition-all duration-300 whitespace-nowrap",
-                  isActive 
-                    ? "text-cinnabar dark:text-cinnabar-light font-serif font-bold" // Changed to Cinnabar
-                    : "text-stone-500 dark:text-stone-400 hover:text-ink dark:hover:text-stone-200 font-serif"
+                  'relative px-3 md:px-4 py-2 rounded-full text-xs md:text-sm font-medium transition-all duration-300 whitespace-nowrap',
+                  isActive
+                    ? 'text-cinnabar dark:text-cinnabar-light font-serif font-bold' // Changed to Cinnabar
+                    : 'text-stone-500 dark:text-stone-400 hover:text-ink dark:hover:text-stone-200 font-serif',
                 )}
               >
                 {t(item.labelKey)}
@@ -46,7 +55,11 @@ const Navbar: React.FC = () => {
                   <motion.div
                     layoutId="navbar-bg"
                     className="absolute inset-0 bg-stone-100 dark:bg-stone-800 rounded-full shadow-sm z-[-1]"
-                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                    transition={{
+                      type: 'spring',
+                      bounce: 0.2,
+                      duration: 0.6,
+                    }}
                   />
                 )}
               </Link>
@@ -66,7 +79,7 @@ const Navbar: React.FC = () => {
               {language === 'en' ? 'EN' : '中'}
             </span>
           </button>
-          
+
           <ThemeToggle />
         </div>
       </nav>

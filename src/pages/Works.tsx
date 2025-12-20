@@ -1,15 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import React, {
+  useEffect,
+  useState,
+} from 'react';
 import Section from '../components/Section';
 import { useLanguage } from '../context/LanguageContext';
 import { Link } from 'react-router-dom';
-import { getContent, MarkdownPost } from '../utils/markdown';
+import {
+  getContent,
+  MarkdownPost,
+} from '../utils/markdown';
 
-const ProjectCard: React.FC<{ project: MarkdownPost; buttonText: string }> = ({ project, buttonText }) => (
-  <Link to={`/works/${project.slug}`} className="w-full group cursor-pointer block">
+const ProjectCard: React.FC<{
+  project: MarkdownPost;
+  buttonText: string;
+}> = ({ project, buttonText }) => (
+  <Link
+    to={`/works/${project.slug}`}
+    className="w-full group cursor-pointer block"
+  >
     <div className="w-full h-48 mb-4 overflow-hidden rounded-2xl shadow-sm border border-white/50 dark:border-white/10 relative">
-      <img 
-        src={project.thumbnail || '/images/placeholder.jpg'} 
-        alt={project.title} 
+      <img
+        src={
+          project.thumbnail ||
+          '/images/placeholder.jpg'
+        }
+        alt={project.title}
         className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 grayscale-[0.3]"
       />
       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
@@ -30,7 +45,9 @@ const ProjectCard: React.FC<{ project: MarkdownPost; buttonText: string }> = ({ 
 
 const Works: React.FC = () => {
   const { t } = useLanguage();
-  const [projects, setProjects] = useState<MarkdownPost[]>([]);
+  const [projects, setProjects] = useState<
+    MarkdownPost[]
+  >([]);
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -50,8 +67,14 @@ const Works: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
         {projects.map((project, index) => (
-          <Section key={project.slug} delay={index * 0.1}>
-            <ProjectCard project={project} buttonText={t('works.read_more')} />
+          <Section
+            key={project.slug}
+            delay={index * 0.1}
+          >
+            <ProjectCard
+              project={project}
+              buttonText={t('works.read_more')}
+            />
           </Section>
         ))}
       </div>

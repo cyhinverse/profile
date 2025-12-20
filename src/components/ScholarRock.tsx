@@ -1,6 +1,18 @@
-import React, { useRef, Suspense, useMemo } from 'react';
+import React, {
+  useRef,
+  Suspense,
+  useMemo,
+} from 'react';
 import { Canvas } from '@react-three/fiber';
-import { Float, useGLTF, Environment, ContactShadows, Center, Html, OrbitControls } from '@react-three/drei';
+import {
+  Float,
+  useGLTF,
+  Environment,
+  ContactShadows,
+  Center,
+  Html,
+  OrbitControls,
+} from '@react-three/drei';
 import { Group } from 'three';
 import { useInView } from 'framer-motion';
 
@@ -15,8 +27,6 @@ declare global {
   }
 }
 
-
-
 const Loader = () => {
   return (
     <Html center>
@@ -27,10 +37,12 @@ const Loader = () => {
   );
 };
 
-const CustomModel: React.FC<{ url: string }> = ({ url }) => {
+const CustomModel: React.FC<{ url: string }> = ({
+  url,
+}) => {
   const { scene } = useGLTF(url);
   const meshRef = useRef<Group>(null);
-  
+
   const clonedScene = useMemo(() => {
     const cloned = scene.clone();
     cloned.traverse((child) => {
@@ -43,80 +55,103 @@ const CustomModel: React.FC<{ url: string }> = ({ url }) => {
   }, [scene]);
 
   return (
-    <primitive 
+    <primitive
       ref={meshRef}
-      object={clonedScene} 
-      scale={0.8} 
-      position={[0, -1, 0]} 
-      rotation={[0, -Math.PI / 4, 0]} // Rotate model to face the camera nicely
+      object={clonedScene}
+      scale={0.4}
+      position={[0, 0, 0]} // Reset to true center
+      rotation={[0, -Math.PI / 4, 0]}
     />
   );
 };
 
 const ScholarRock: React.FC = () => {
   const containerRef = useRef(null);
-  const isInView = useInView(containerRef, { margin: "100px" });
+  const isInView = useInView(containerRef, {
+    margin: '100px',
+  });
 
   return (
-    <div ref={containerRef} className="h-[500px] w-full cursor-move active:cursor-grabbing transition-all duration-500">
-      <Canvas 
-        shadows 
-        camera={{ position: [10, 10, 10], fov: 25 }} 
-        dpr={[1, 1.5]}
-        gl={{ antialias: true, stencil: false, depth: true }}
-        frameloop={isInView ? "always" : "never"}
+    <div
+      ref={containerRef}
+      className="w-full max-w-[600px] h-[400px] mx-auto overflow-hidden rounded-3xl border border-stone-200/50 dark:border-stone-800/30 bg-stone-100/5 dark:bg-stone-900/10 backdrop-blur-sm shadow-xl transition-all duration-500 relative group"
+    >
+      <Canvas
+        shadows
+        className="pointer-events-none"
+        camera={{
+          position: [6, 5, 8],
+          fov: 22,
+        }}
+        dpr={[1, 2]}
+        gl={{
+          antialias: true,
+          stencil: false,
+          depth: true,
+        }}
+        frameloop={isInView ? 'always' : 'never'}
         performance={{ min: 0.5 }}
       >
-        
-        {/* Lighting Setup for Clarity and Realism */}
         <ambientLight intensity={0.7} />
-        <directionalLight 
-          position={[10, 10, 5]} 
-          intensity={2} 
-          color="#fff7ed" 
-          castShadow 
-          shadow-mapSize={[512, 512]}
+        <directionalLight
+          position={[10, 10, 5]}
+          intensity={2.5}
+          color="#fff7ed"
+          castShadow
+          shadow-mapSize={[1024, 1024]}
         />
-        <spotLight 
-          position={[-5, 10, -5]} 
-          intensity={2} 
-          color="#ffffff" 
-          angle={0.5} 
-          penumbra={1} 
-          castShadow 
+        <spotLight
+          position={[-5, 10, -5]}
+          intensity={2}
+          color="#ffffff"
+          angle={0.5}
+          penumbra={1}
+          castShadow
         />
-        
+
         <Environment preset="studio" />
 
         <Suspense fallback={<Loader />}>
-          <Float speed={1} rotationIntensity={0.05} floatIntensity={0.1} floatingRange={[-0.02, 0.02]}>
+          <Float
+            speed={1.5}
+            rotationIntensity={0.1}
+            floatIntensity={0.2}
+            floatingRange={[-0.05, 0.05]}
+            position={[0, 0.2, 0]}
+          >
             <Center>
-               <CustomModel url="/computer.glb" />
+              <CustomModel url="/computer.glb" />
             </Center>
           </Float>
         </Suspense>
-        
-        <ContactShadows 
-          position={[0, -2, 0]} 
-          opacity={0.4} 
-          scale={10} 
-          blur={2.5} 
-          far={4} 
-          resolution={256} 
-          color="#000000" 
+
+        <ContactShadows
+          position={[0, -0.8, 0]}
+          opacity={0.5}
+          scale={10}
+          blur={2.5}
+          far={1.5}
+          resolution={256}
+          color="#000000"
           frames={1}
         />
 
-        <OrbitControls 
-          makeDefault 
-          enableZoom={true} 
-          enablePan={false} 
-          minPolarAngle={0} 
-          maxPolarAngle={Math.PI / 2} 
+        <OrbitControls
+          makeDefault
+          enableRotate={false}
+          enableZoom={false}
+          enablePan={false}
           autoRotate={true}
-          autoRotateSpeed={0.5}
+          autoRotateSpeed={0.8}
         />
       </Canvas>
+
+      {/* Visual Overlay - changed to hint that it's a showcase, not interactive */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        <p className="text-[10px] uppercase tracking-[0.2em] text-stone-500 font-medium">
+          Automated Showcase
+        </p>
+      </div>
     </div>
   );
 };

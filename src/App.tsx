@@ -1,24 +1,30 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   useLocation,
-} from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import MusicPlayer from "./components/MusicPlayer";
-import ScrollToTop from "./components/ScrollToTop";
-import { LanguageProvider } from "./context/LanguageContext";
+} from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import MusicPlayer from './components/MusicPlayer';
+import ScrollToTop from './components/ScrollToTop';
+import { LanguageProvider } from './context/LanguageContext';
 
 // Lazy load pages
-const Home = lazy(() => import("./pages/Home"));
-const Works = lazy(() => import("./pages/Works"));
-const Posts = lazy(() => import("./pages/Posts"));
-const WorkDetail = lazy(() => import("./pages/WorkDetail"));
-const PostDetail = lazy(() => import("./pages/PostDetail"));
-const NotFound = lazy(() => import("./pages/NotFound"));
+const Home = lazy(() => import('./pages/Home'));
+const Works = lazy(() => import('./pages/Works'));
+const Posts = lazy(() => import('./pages/Posts'));
+const WorkDetail = lazy(
+  () => import('./pages/WorkDetail'),
+);
+const PostDetail = lazy(
+  () => import('./pages/PostDetail'),
+);
+const NotFound = lazy(
+  () => import('./pages/NotFound'),
+);
 
 // Loading component
 const PageLoader = () => (
@@ -35,13 +41,31 @@ const AnimatedRoutes = () => {
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
       <AnimatePresence mode="wait" initial={true}>
         <Suspense fallback={<PageLoader />}>
-          <Routes location={location} key={location.pathname}>
+          <Routes
+            location={location}
+            key={location.pathname}
+          >
             <Route path="/" element={<Home />} />
-            <Route path="/works" element={<Works />} />
-            <Route path="/works/:id" element={<WorkDetail />} />
-            <Route path="/posts" element={<Posts />} />
-            <Route path="/posts/:id" element={<PostDetail />} />
-            <Route path="*" element={<NotFound />} />
+            <Route
+              path="/works"
+              element={<Works />}
+            />
+            <Route
+              path="/works/:id"
+              element={<WorkDetail />}
+            />
+            <Route
+              path="/posts"
+              element={<Posts />}
+            />
+            <Route
+              path="/posts/:id"
+              element={<PostDetail />}
+            />
+            <Route
+              path="*"
+              element={<NotFound />}
+            />
           </Routes>
         </Suspense>
       </AnimatePresence>

@@ -1,11 +1,11 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --font-sans: "Outfit", sans-serif;
-  --font-serif: "Space Mono", monospace;
-  --font-brush: "Space Mono", monospace;
+  --font-sans: 'Outfit', sans-serif;
+  --font-serif: 'Space Mono', monospace;
+  --font-brush: 'Space Mono', monospace;
 
   --color-paper: #fcfaf7;
   --color-ink: #2b2b2b;
@@ -32,7 +32,9 @@
 body {
   background-color: var(--color-paper);
   color: var(--color-ink);
-  transition: background-color 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+  transition:
+    background-color 0.5s
+      cubic-bezier(0.2, 0.8, 0.2, 1),
     color 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
   letter-spacing: -0.015em;
   line-height: 1.6;
