@@ -1,7 +1,7 @@
 ---
 title: How to use Redis
 date: 2025-11-23T15:23:00.000+07:00
-thumbnail: /images/uploads/system_architecture.png
+thumbnail: /images/uploads/2023_12_25_638391139949395813_anh-dai-dien.jpg
 description: Why do we use redis ?
 ---
 # Why We Use Redis
