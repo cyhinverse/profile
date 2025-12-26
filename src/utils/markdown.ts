@@ -12,7 +12,6 @@ export interface MarkdownPost {
 }
 
 const parseFrontmatter = (text: string) => {
-  // Remove Byte Order Mark (BOM) if present and trim leading whitespace
   const cleanText = text
     .replace(/^\uFEFF/, '')
     .trimStart();
