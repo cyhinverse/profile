@@ -1,6 +1,6 @@
 ---
 title: 'The Software Engineer in the AI Era: Adapt or Perish?'
-date: 2026-02-20T14:30:00.000+07:00
+date: 2025-12-26T14:30:00.000+07:00
 
 summary: AI is changing how we write code. Here is what modern Software Engineers need to focus on to thrive in the age of artificial intelligence.
 ---
