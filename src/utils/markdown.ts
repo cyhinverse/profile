@@ -12,7 +12,11 @@ export interface MarkdownPost {
 }
 
 const parseFrontmatter = (text: string) => {
-  const match = text.match(
+  // Remove Byte Order Mark (BOM) if present and trim leading whitespace
+  const cleanText = text
+    .replace(/^\uFEFF/, '')
+    .trimStart();
+  const match = cleanText.match(
     /^---\r?\n([\s\S]*?)\r?\n---/,
   );
   if (!match) {
