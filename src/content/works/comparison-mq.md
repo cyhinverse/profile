@@ -17,19 +17,19 @@ This article compares four of the most popular message brokers: **RabbitMQ**, **
 
 **RabbitMQ** is one of the most widely deployed open-source message brokers. It allows you to define complex routing rules using exchanges and queues.
 
-### ✅ Pros
+### Pros
 
 - **Reliability:** Supports persistent messages and delivery acknowledgments.
 - **Flexible Routing:** Excellent support for complex routing logic (direct, topic, fanout, headers).
 - **Protocol Support:** Supports AMQP, MQTT, STOMP, and more.
 - **Easy Management:** Comes with a user-friendly management UI.
 
-### ❌ Cons
+### Cons
 
 - **Throughput:** Lower throughput compared to Kafka (usually around 40k-100k msgs/sec).
 - **Complexity:** Can be complex to configure for high availability clustering.
 
-### 💡 When to Use
+### When to Use
 
 - You need complex routing (e.g., sending specific errors to one service and logs to another).
 - You need guaranteed delivery and message acknowledgement.
@@ -41,20 +41,20 @@ This article compares four of the most popular message brokers: **RabbitMQ**, **
 
 **Kafka** is a distributed event streaming platform capable of handling trillions of events a day. It acts more like a distributed log than a traditional queue.
 
-### ✅ Pros
+### Pros
 
 - **Insane Throughput:** Can handle millions of messages per second with low latency.
 - **Durability:** Messages are stored on disk and can be replayed (great for event sourcing).
 - **Scalability:** Highly scalable and distributed by design.
 - **Real-time Processing:** Excellent for stream processing (e.g., with Kafka Streams).
 
-### ❌ Cons
+### Cons
 
 - **Complexity:** Harder to set up and manage (requires Zookeeper/KRaft).
 - **No Individual Ack:** Doesn't track individual message tracking like RabbitMQ; consumers track their own offset.
 - **Overkill:** Likely overkill for simple job queues.
 
-### 💡 When to Use
+### When to Use
 
 - You are dealing with massive amounts of data (Big Data).
 - You need to track website activity or operational metrics.
@@ -67,7 +67,7 @@ This article compares four of the most popular message brokers: **RabbitMQ**, **
 
 **Redis** is primarily an in-memory key-value store, but its Pub/Sub (Publish/Subscribe) feature is incredibly fast and lightweight.
 
-### ✅ Pros
+### Pros
 
 - **Speed:** Extremely low latency (sub-millisecond).
 - **Simplicity:** Very easy to implement if you are already using Redis.
