@@ -37,7 +37,7 @@ const translations = {
     'home.love_title': 'I ♥',
     'home.love_desc':
       'Music, Drawing, Calligraphy, Photography.',
-    'works.title': 'Selected Works',
+    'works.title': 'Works',
     'works.read_more': 'View Details',
     'posts.title': 'Writing',
     'posts.read_more': 'Read Article',
