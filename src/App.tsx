@@ -8,7 +8,7 @@ import {
 import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import MusicPlayer from './components/MusicPlayer';
+
 import ScrollToTop from './components/ScrollToTop';
 import { LanguageProvider } from './context/LanguageContext';
 
@@ -78,9 +78,6 @@ const App: React.FC = () => {
     <LanguageProvider>
       <Router>
         <div className="min-h-screen flex flex-col font-sans text-ink dark:text-stone-200 transition-colors duration-500">
-          {/* Background Texture (Optional) */}
-          <div className="fixed inset-0 opacity-[0.03] pointer-events-none z-[-1] bg-[url('https://www.transparenttextures.com/patterns/rice-paper.png')]"></div>
-
           <ScrollToTop />
           <Navbar />
 
@@ -89,7 +86,6 @@ const App: React.FC = () => {
           </main>
 
           <Footer />
-          <MusicPlayer />
         </div>
       </Router>
     </LanguageProvider>
