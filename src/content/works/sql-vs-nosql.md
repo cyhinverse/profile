@@ -1,5 +1,5 @@
 ---
-title: SQL vs NoSQL: Choosing the Right Database
+title: 'SQL vs NoSQL: Choosing the Right Database'
 date: 2025-12-26T12:20:00.000+07:00
 thumbnail: /images/uploads/sql-vs-nosql.jpg
 description: A deep dive into the differences between Relational (SQL) and Non-Relational (NoSQL) databases, and when to use each.

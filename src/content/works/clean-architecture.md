@@ -1,5 +1,5 @@
 ---
-title: Clean Architecture: A Guide to Scalable Software
+title: 'Clean Architecture: A Guide to Scalable Software'
 date: 2025-12-26T12:25:00.000+07:00
 thumbnail: /images/uploads/clean-architecture.jpg
 description: Understand the principles of Clean Architecture to build maintainable, testable, and robust software systems.

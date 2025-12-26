@@ -1,5 +1,5 @@
 ---
-title: JavaScript vs TypeScript: Which One Should You Learn?
+title: 'JavaScript vs TypeScript: Which One Should You Learn?'
 date: 2025-12-26T12:15:00.000+07:00
 thumbnail: /images/uploads/js-vs-ts.jpg
 description: A comprehensive comparison of the dynamic agility of JavaScript versus the static safety of TypeScript.
