@@ -13,7 +13,7 @@ export interface MarkdownPost {
 
 const parseFrontmatter = (text: string) => {
   const match = text.match(
-    /^---\n([\s\S]*?)\n---/,
+    /^---\r?\n([\s\S]*?)\r?\n---/,
   );
   if (!match) {
     return { data: {}, content: text };
