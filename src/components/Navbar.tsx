@@ -12,6 +12,7 @@ const navItems = [
   { path: '/', labelKey: 'nav.about' },
   { path: '/works', labelKey: 'nav.works' },
   { path: '/posts', labelKey: 'nav.posts' },
+  { path: '/resume', labelKey: 'nav.resume' },
 ];
 
 const Navbar: React.FC = () => {

@@ -14,9 +14,10 @@ interface LanguageContextType {
 
 const translations = {
   en: {
-    'nav.about': 'About',
+    'nav.about': 'Home',
     'nav.works': 'Works',
     'nav.posts': 'Writing',
+    'nav.resume': 'Resume',
     'home.greeting':
       "Hello, I'm an indie developer based in Vietnam :>",
     'home.role':
@@ -50,9 +51,10 @@ const translations = {
     'not_found.home_btn': 'Return Home',
   },
   zh: {
-    'nav.about': '关于',
+    'nav.about': '首页',
     'nav.works': '作品',
     'nav.posts': '随笔',
+    'nav.resume': '简历',
     'home.greeting':
       '你好，我是一名现居越南的独立开发者！',
     'home.role': '数字工匠 ( 开发者 / 学生 )',

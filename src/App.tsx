@@ -16,6 +16,9 @@ import { LanguageProvider } from './context/LanguageContext';
 const Home = lazy(() => import('./pages/Home'));
 const Works = lazy(() => import('./pages/Works'));
 const Posts = lazy(() => import('./pages/Posts'));
+const Resume = lazy(
+  () => import('./pages/Resume'),
+);
 const WorkDetail = lazy(
   () => import('./pages/WorkDetail'),
 );
@@ -57,6 +60,10 @@ const AnimatedRoutes = () => {
             <Route
               path="/posts"
               element={<Posts />}
+            />
+            <Route
+              path="/resume"
+              element={<Resume />}
             />
             <Route
               path="/posts/:id"
