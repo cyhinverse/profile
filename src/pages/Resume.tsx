@@ -12,7 +12,7 @@ const Resume: React.FC = () => {
   return (
     <div className="py-12 flex justify-center bg-transparent">
       {/* The main paper-like container */}
-      <div className="w-full rounded-xl max-w-[900px] bg-white dark:bg-stone-900 shadow-none border border-stone-200 dark:border-white/10 p-[1.4cm] font-[Times_New_Roman,Times,serif] text-black dark:text-stone-300 leading-tight selection:bg-stone-200">
+      <div className="w-full rounded-xl max-w-[900px] bg-white dark:bg-zinc-950 shadow-none border border-zinc-200 dark:border-zinc-800 p-[1.4cm] font-[Times_New_Roman,Times,serif] text-black dark:text-zinc-100 leading-tight selection:bg-zinc-200 dark:selection:bg-zinc-800">
         {/* ---------- HEADING ---------- */}
         <section className="text-center mb-6">
           <h1
@@ -34,7 +34,7 @@ const Resume: React.FC = () => {
 
             <a
               href="mailto:cyhincdr@gmail.com"
-              className="flex items-center gap-1 leading-none hover:text-cinnabar transition-colors"
+              className="flex items-center gap-1 leading-none hover:text-cinnabar dark:hover:text-red-400 transition-colors"
             >
               <Mail
                 size={10}
@@ -47,7 +47,7 @@ const Resume: React.FC = () => {
 
             <a
               href="https://linkedin.com/in/tranphanquocanh"
-              className="flex items-center gap-1 leading-none hover:text-cinnabar transition-colors"
+              className="flex items-center gap-1 leading-none hover:text-cinnabar dark:hover:text-red-400 transition-colors"
             >
               <Linkedin
                 size={10}
@@ -60,7 +60,7 @@ const Resume: React.FC = () => {
 
             <a
               href="https://github.com/cyhinverse"
-              className="flex items-center gap-1 leading-none hover:text-cinnabar transition-colors"
+              className="flex items-center gap-1 leading-none hover:text-cinnabar dark:hover:text-red-400 transition-colors"
             >
               <Github
                 size={10}
@@ -73,7 +73,7 @@ const Resume: React.FC = () => {
 
             <a
               href="https://cyhin.engineer"
-              className="flex items-center gap-1 leading-none hover:text-cinnabar transition-colors"
+              className="flex items-center gap-1 leading-none hover:text-cinnabar dark:hover:text-red-400 transition-colors"
             >
               <Briefcase
                 size={10}
@@ -90,7 +90,7 @@ const Resume: React.FC = () => {
         {/* ----------- EDUCATION ----------- */}
         <section className="mb-5">
           <h2
-            className="text-[12pt] font-bold border-b border-black dark:border-white mb-2 pb-0.5 tracking-tight"
+            className="text-[12pt] font-bold border-b border-black dark:border-zinc-500 mb-2 pb-0.5 tracking-tight"
             style={{ fontVariant: 'small-caps' }}
           >
             Education
@@ -136,7 +136,7 @@ const Resume: React.FC = () => {
 
         <section className="mb-5">
           <h2
-            className="text-[12pt] font-bold border-b border-black dark:border-white mb-2 pb-0.5 tracking-tight"
+            className="text-[12pt] font-bold border-b border-black dark:border-zinc-500 mb-2 pb-0.5 tracking-tight"
             style={{ fontVariant: 'small-caps' }}
           >
             Engineering Experience
@@ -500,7 +500,7 @@ const Resume: React.FC = () => {
         {/* ----------- LEADERSHIP ----------- */}
         <section className="mb-5">
           <h2
-            className="text-[12pt] font-bold border-b border-black dark:border-white mb-2 pb-0.5 tracking-tight"
+            className="text-[12pt] font-bold border-b border-black dark:border-zinc-500 mb-2 pb-0.5 tracking-tight"
             style={{ fontVariant: 'small-caps' }}
           >
             Leadership
@@ -580,7 +580,7 @@ const Resume: React.FC = () => {
         {/* ----------- TECHNICAL SKILLS ----------- */}
         <section>
           <h2
-            className="text-[12pt] font-bold border-b border-black dark:border-white mb-2 pb-0.5 tracking-tight"
+            className="text-[12pt] font-bold border-b border-black dark:border-zinc-500 mb-2 pb-0.5 tracking-tight"
             style={{ fontVariant: 'small-caps' }}
           >
             Technical Skills
