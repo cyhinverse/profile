@@ -24,9 +24,9 @@ const translations = {
       'Digital Craftsman ( Software Developer / Student )',
     'home.work_title': 'Work',
     'home.work_desc':
-      'Hello everyone, my name is [Anh](#green). I am [21 years old](#purple) and currently a student at [HUTECH University](#green), set to graduate in the [2025–2026 academic year](#purple) with a major in [Information Technology](#green). ' +
-      'My career aspiration is to become a [Software Engineering](#green). I am dedicated to [addressing various client needs](#yellow) and [providing reliable technical solutions](#yellow) through coding. ' +
-      'This is the first blog I have created to [share the knowledge](#purple) and [learning experiences](#purple) I have gained over the past four years. Thank you for visiting my website. I sincerely appreciate your [support](#underline).',
+      'Hello everyone, my name is [Anh](#green). I am [21 years old](#purple) and currently an [Information Technology](#green) student at [HUTECH University](#green), expected to graduate in the [2025–2026 academic year](#purple). ' +
+      'My goal is to become a [Software Engineer](#green) dedicated to [solving client needs](#yellow) and delivering [reliable technical solutions](#yellow) through code. ' +
+      'I created this blog to share the [knowledge and experiences](#purple) I have gained over the past four years. Thank you for visiting my website—I sincerely appreciate your [support](#underline).',
     'home.portfolio_btn': 'My Portfolio',
     'home.bio_title': 'Bio',
     'home.born':
@@ -60,9 +60,9 @@ const translations = {
     'home.role': '数字工匠 ( 开发者 / 学生 )',
     'home.work_title': '工作',
     'home.work_desc':
-      '大家好，我叫 [Ying](#green)，今年 [二十一岁](#purple)，目前仍是 [HUTECH](#green) 的在校生，即将在 [2025–2026](#purple) 学年从 [信息技术专业](#green) 毕业。' +
-      '我的职业理想是成为一名 [全栈开发工程师](#green)。我致力于 [解决客户各类需求](#yellow)，并以专业的代码能力 [提供可靠的技术支持](#yellow)。' +
-      '这是我创建的第一个博客，用于 [分享我四年来的学习经验与知识](#purple)。感谢各位访问我的网站，[谨致谢意](#underline)。',
+      '大家好，我是 [Anh](#green)。我今年 [21岁](#purple)，目前就读于 [HUTECH](#green) [信息技术专业](#green)，预计将于 [2025-2026](#purple) 学年毕业。' +
+      '我的职业目标是成为一名 [软件工程师](#green)，致力于通过代码 [解决客户需求](#yellow) 并提供 [可靠的技术解决方案](#yellow)。' +
+      '这是我创建的第一个博客，旨在分享我过去四年中积累的 [知识和学习经验](#purple)。感谢您访问我的网站，[真心感谢您的支持](#underline)。',
     'home.portfolio_btn': '作品集',
     'home.bio_title': '经历',
     'home.born': '出生于越南胡志明市。',
