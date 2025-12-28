@@ -17,7 +17,7 @@ YIBU is a visual-centric social platform focused on discovery and real-time enga
 
 ### Key Achievements
 
-- **Prevented advanced session hijacking** as measured by **100% detection and revocation** of compromised sessions by designing a **JWT Token Family** architecture with **automated rotation** and **family-based reuse detection**.
+- **Mitigated session hijacking risks** as measured by **automated detection and immediate revocation** of compromised sessions by designing a **JWT Token Family** architecture with **automated rotation** and **family-based reuse detection**.
 - **Increased user engagement** through personalized content discovery, **optimizing content relevance** via multi-dimensional ranking, by building a **Hybrid Recommendation Engine** using **Collaborative Filtering** and real-time **Trending Score** calculations.
-- **Optimized backend read performance** for high-traffic engagement metrics, achieving **O(1) time complexity** for real-time interaction counters, by architecting a **Denormalization strategy** and **atomic update operations**.
+- **Optimized system-wide data integrity and read performance** as measured by **eliminating expensive runtime aggregations** for high-traffic feeds, by implementing **ACID Transactions** and a **Denormalized counter strategy** for **constant-time data retrieval**.
 - **Reduced initial bundle size by ~40%** and **improved Time to Interactive (TTI)** by implementing a **Granular Code Splitting strategy** with **React Lazy/Suspense**, optimizing delivery for 92+ unique components.

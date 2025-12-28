@@ -19,5 +19,5 @@ A robust and scalable e-commerce backend designed to handle high-traffic peak lo
 
 - **Accelerated product creation workflow** for multi-variant items by **60%** by implementing a **Concurrent File Upload** mechanism using Promise-based parallel processing with the **Cloudinary API**.
 - **Optimized data retrieval latency** to **under 10ms** for 90% of repeated requests by implementing a centralized **Redis Caching** system with an intelligent cache invalidation strategy.
-- **Reduced API response time by 40%** and minimized main server load by decoupling heavy tasks (Email/Notifications) into an asynchronous **RabbitMQ Message Queue** architecture.
-- **Optimized core product discovery APIs** to sustain peak loads of **8,000+ Requests Per Second (RPS)** with sub-10ms response times by implementing a strategic **multi-layer Redis Caching** and **Node.js Cluster Mode** across all CPU cores.
+- **Decoupled high-latency tasks (Email/Notifications)** from the main request flow, reducing API response time by **40%** and ensuring **100% notification delivery** during peak traffic via a **RabbitMQ Message Queue architecture.**
+- **Optimized core product discovery APIs** to sustain **5,000+ Requests Per Second (RPS)** with **sub-10ms latency** by implementing **multi-layer Redis caching** and **Node.js process clustering.**

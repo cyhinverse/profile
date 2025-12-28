@@ -18,5 +18,5 @@ A high-performance AI-driven platform for automated interview processing, utiliz
 
 ### Key Achievements
 
-- **Architected a scalable backend** for the AI Interview Platform using **FastAPI** and the **Service-Repository pattern**, decoupling business logic from data access to improve system maintainability and reduce new feature development time by **40%**.
-- **Implemented a feature-based modular structure** to encapsulate routing, business logic, and schemas into independent modules, enabling seamless parallel development for a 5-10 person team and minimizing code conflicts.
+- **Designed a backend with FastAPI using the Service-Repository pattern**, which organized the code into clear layers and made it much easier to **add new features** without breaking existing ones.
+- **Organized the project into a modular, feature-based structure**, making the codebase clean and easy to navigate for the team while **significantly reducing merge conflicts** during collaboration.
