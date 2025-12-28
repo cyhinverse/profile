@@ -41,7 +41,13 @@ const AnimatedRoutes = () => {
   const location = useLocation();
 
   return (
-    <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+    <div
+      className={`mx-auto px-4 sm:px-6 lg:px-8 pt-24 ${
+        location.pathname === '/resume'
+          ? 'max-w-4xl'
+          : 'max-w-3xl'
+      }`}
+    >
       <AnimatePresence mode="wait" initial={true}>
         <Suspense fallback={<PageLoader />}>
           <Routes

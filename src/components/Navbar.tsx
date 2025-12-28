@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
   return (
     <div className="fixed top-6 w-full z-50 flex justify-center pointer-events-none px-4">
       <nav
-        className="pointer-events-auto flex items-center gap-1 p-1.5 rounded-full bg-white/80 dark:bg-stone-900/80 backdrop-blur-md border border-stone-200/50 dark:border-stone-700/30 shadow-sm ring-1 ring-black/5 dark:ring-white/5 transition-colors duration-500 max-w-full overflow-hidden"
+        className="pointer-events-auto flex items-center gap-1 p-1.5 rounded-full bg-[#f0e7db]/25 dark:bg-[#202023]/80 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-lg ring-1 ring-black/5 dark:ring-white/5 transition-colors duration-500 max-w-full overflow-hidden"
         style={{
           transform: 'translateZ(0)',
           contain: 'layout style',

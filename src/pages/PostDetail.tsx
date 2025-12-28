@@ -80,7 +80,7 @@ const PostDetail: React.FC = () => {
             <h1 className="text-3xl md:text-4xl font-serif font-bold text-ink dark:text-stone-100 mb-6 leading-tight">
               {post.title}
             </h1>
-            <div className="flex items-center justify-center gap-6 text-sm text-stone-500 dark:text-stone-400 font-mono">
+            <div className="flex items-center justify-center gap-6 text-sm text-stone-500 dark:text-stone-400 font-mono mb-8">
               <span className="flex items-center gap-2">
                 <Calendar size={14} />{' '}
                 {format(
@@ -88,14 +88,22 @@ const PostDetail: React.FC = () => {
                   'MMMM dd, yyyy',
                 )}
               </span>
-              {/* Read time calculation could be added here */}
             </div>
+
+            {post.thumbnail && (
+              <div className="w-full aspect-video rounded-2xl overflow-hidden shadow-md border border-stone-200 dark:border-stone-700">
+                <img
+                  src={post.thumbnail}
+                  alt={post.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            )}
           </div>
         </Section>
 
         <Section delay={0.2}>
-          {/* Blog Content Container mimicking a page of text */}
-          <div className="bg-white dark:bg-stone-800/50 p-5 md:p-12 rounded-2xl shadow-sm ring-1 ring-stone-100 dark:ring-white/5">
+          <div className="max-w-2xl mx-auto border border-stone-200 dark:border-white/10 rounded-2xl p-5 md:p-12 shadow-sm">
             <MarkdownRenderer
               content={post.body}
             />

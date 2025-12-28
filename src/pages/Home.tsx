@@ -4,65 +4,11 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import {
-  FaReact,
-  FaNodeJs,
-} from 'react-icons/fa';
-import {
-  SiFastapi,
-  SiTailwindcss,
-  SiRedis,
-  SiRabbitmq,
-  SiMongodb,
-  SiPostgresql,
-} from 'react-icons/si';
+import MarkdownRenderer from '../components/MarkdownRenderer';
 
 const ScholarRock = lazy(
   () => import('../components/ScholarRock'),
 );
-
-const TECH_STACK = [
-  {
-    Icon: FaReact,
-    color: '#61DAFB',
-    name: 'React',
-  },
-  {
-    Icon: FaNodeJs,
-    color: '#339933',
-    name: 'Node.js',
-  },
-  {
-    Icon: SiFastapi,
-    color: '#009688',
-    name: 'FastAPI',
-  },
-  {
-    Icon: SiTailwindcss,
-    color: '#06B6D4',
-    name: 'Tailwind',
-  },
-  {
-    Icon: SiRedis,
-    color: '#DC382D',
-    name: 'Redis',
-  },
-  {
-    Icon: SiRabbitmq,
-    color: '#FF6600',
-    name: 'RabbitMQ',
-  },
-  {
-    Icon: SiMongodb,
-    color: '#47A248',
-    name: 'MongoDB',
-  },
-  {
-    Icon: SiPostgresql,
-    color: '#336791',
-    name: 'PostgreSQL',
-  },
-];
 
 const Home: React.FC = () => {
   const { t } = useLanguage();
@@ -82,11 +28,11 @@ const Home: React.FC = () => {
     <div className="pt-4">
       <Section>
         <div
-          className="bg-stone-200/30 dark:bg-stone-800/30 rounded-xl p-6 text-center mb-10 border border-stone-200/50 dark:border-white/5"
+          className="bg-white/50 dark:bg-white/5 rounded-lg p-3 text-center mb-6 border border-white/40 dark:border-white/10 backdrop-blur-sm"
           style={{ transform: 'translateZ(0)' }}
         >
           <motion.p
-            className="text-stone-700 dark:text-stone-300 text-xl font-serif italic inline-block p-1"
+            className="text-stone-700 dark:text-stone-300 font-serif italic inline-block"
             initial={{
               clipPath: 'inset(0 100% 0 0)',
             }}
@@ -106,7 +52,7 @@ const Home: React.FC = () => {
       <Section delay={0.1}>
         <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mb-8">
           <div className="grow text-center md:text-left">
-            <h2 className="text-5xl font-brush text-ink dark:text-stone-100 mb-3 tracking-wide">
+            <h2 className="text-4xl font-brush font-bold text-ink dark:text-stone-100 mb-3 tracking-wide">
               Quoc Anh
             </h2>
             <p className="text-stone-600 dark:text-stone-400 text-lg font-serif tracking-wider">
@@ -118,11 +64,11 @@ const Home: React.FC = () => {
               {/* Cinnabar bloom on hover */}
               <div className="absolute inset-0 bg-cinnabar opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
               <img
-                src="/img/avatar.jpg"
+                src="/img/1.png"
                 alt="Profile"
                 width="128"
                 height="128"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-[center_35%]"
                 fetchPriority="high"
               />
             </div>
@@ -175,9 +121,11 @@ const Home: React.FC = () => {
         <h3 className="text-2xl font-serif font-bold underline decoration-2 decoration-cinnabar/30 dark:decoration-cinnabar-light/30 underline-offset-8 mb-6 text-ink dark:text-stone-100">
           {t('home.work_title')}
         </h3>
-        <p className="text-stone-700 dark:text-stone-300 leading-relaxed text-lg mb-6 font-sans text-justify">
-          {t('home.work_desc')}
-        </p>
+        <div className="text-stone-700 dark:text-stone-300 leading-relaxed text-lg mb-6 font-sans text-justify">
+          <MarkdownRenderer
+            content={t('home.work_desc')}
+          />
+        </div>
         <div className="flex justify-center my-10">
           <Link
             to="/works"
@@ -224,65 +172,15 @@ const Home: React.FC = () => {
         </div>
       </Section>
 
-      <Section delay={0.45}>
-        <h3 className="text-2xl font-serif font-bold underline decoration-2 decoration-cinnabar/30 dark:decoration-cinnabar-light/30 underline-offset-8 mb-8 text-ink dark:text-stone-100">
-          Tech Stack
-        </h3>
-        <div className="flex flex-wrap md:flex-nowrap gap-4 justify-center py-4">
-          {TECH_STACK.map(
-            ({ Icon, color, name }) => (
-              <div
-                key={name}
-                className="group relative flex flex-col items-center justify-center p-3"
-                style={
-                  {
-                    '--icon-color': color,
-                  } as React.CSSProperties
-                }
-              >
-                {/* Glow background - uses radial gradient instead of blur filter for better performance */}
-                <div
-                  className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300 pointer-events-none"
-                  style={{
-                    background: `radial-gradient(circle at center, ${color} 0%, transparent 70%)`,
-                    transform: 'translateZ(0)',
-                  }}
-                />
-
-                {/* Icon container with transform animation */}
-                <div className="relative z-10 transform-gpu transition-transform duration-200 ease-out group-hover:scale-110 group-hover:-translate-y-1">
-                  <Icon
-                    size={40}
-                    className="text-stone-400 dark:text-stone-500 transition-colors duration-200"
-                  />
-                  {/* Colored overlay - fades in on hover */}
-                  <Icon
-                    size={40}
-                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-                    style={{ color: color }}
-                  />
-                </div>
-
-                {/* Label */}
-                <span
-                  className="mt-3 text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute -bottom-5 whitespace-nowrap pointer-events-none"
-                  style={{ color: color }}
-                >
-                  {name}
-                </span>
-              </div>
-            ),
-          )}
-        </div>
-      </Section>
-
       <Section delay={0.5}>
         <h3 className="text-2xl font-serif font-bold underline decoration-2 decoration-cinnabar/30 dark:decoration-cinnabar-light/30 underline-offset-8 mb-6 text-ink dark:text-stone-100">
           {t('home.love_title')}
         </h3>
-        <p className="text-stone-700 dark:text-stone-300 leading-loose text-lg font-sans">
-          {t('home.love_desc')}
-        </p>
+        <div className="text-stone-700 dark:text-stone-300 leading-loose text-lg font-sans">
+          <MarkdownRenderer
+            content={t('home.love_desc')}
+          />
+        </div>
       </Section>
     </div>
   );

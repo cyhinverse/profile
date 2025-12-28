@@ -5,6 +5,7 @@ import React, {
 import {
   useParams,
   useNavigate,
+  Link,
 } from 'react-router-dom';
 import {
   ArrowLeft,
@@ -60,52 +61,107 @@ const WorkDetail: React.FC = () => {
   return (
     <div className="pt-4 pb-20">
       <Section>
-        <button
-          onClick={() => navigate('/works')}
-          className="group flex items-center gap-2 text-stone-500 hover:text-jade transition-colors mb-8 text-sm font-medium"
-        >
-          <ArrowLeft
-            size={16}
-            className="group-hover:-translate-x-1 transition-transform"
-          />
-          {t('back')}
-        </button>
+        <div className="flex items-center gap-1.5 mb-8 text-sm font-medium">
+          <Link
+            to="/works"
+            className="text-jade hover:underline transition-colors"
+          >
+            Works
+          </Link>
+          <span className="text-stone-400 opacity-50 px-1">
+            &gt;
+          </span>
+          <h1 className="text-xl font-bold text-ink dark:text-stone-100">
+            {project.title}
+          </h1>
+          <span className="bg-stone-200/50 dark:bg-stone-800 text-stone-600 dark:text-stone-400 px-1.5 py-0.5 rounded text-[10px] font-mono ml-1">
+            {project.yearBadge ||
+              `${new Date(project.date).getFullYear()}-`}
+          </span>
+        </div>
       </Section>
 
       <Section delay={0.1}>
-        <div className="mb-8">
-          <div className="flex flex-col md:flex-row md:items-baseline gap-4 mb-4">
-            <h1 className="text-3xl md:text-4xl font-serif font-bold text-ink dark:text-stone-100">
-              {project.title}
-            </h1>
-            <span className="bg-stone-200 dark:bg-stone-800 text-stone-600 dark:text-stone-400 px-3 py-1 rounded-full text-xs font-mono">
-              {new Date(
-                project.date,
-              ).getFullYear()}
-            </span>
-          </div>
-
-          <p className="text-xl text-stone-600 dark:text-stone-400 font-light leading-relaxed max-w-2xl">
+        <div className="mb-12">
+          <p className="text-lg text-stone-700 dark:text-stone-300 font-light leading-relaxed mb-8 max-w-3xl">
             {project.description}
           </p>
 
-          {project.tags && (
-            <div className="flex flex-wrap gap-2 mt-6">
-              {project.tags.map((tag: string) => (
-                <span
-                  key={tag}
-                  className="text-xs font-medium text-jade dark:text-jade-light border border-jade/20 dark:border-jade/30 px-2 py-1 rounded-md"
-                >
-                  #{tag}
+          <div className="space-y-3">
+            {project.link && (
+              <div className="flex items-center gap-4">
+                <span className="bg-[#E4F2E1] dark:bg-[#2D5A27]/30 text-[#2D5A27] dark:text-[#E4F2E1] px-1.5 py-0.5 rounded-[3px] text-[10px] font-bold uppercase tracking-wider shrink-0 w-20 text-center">
+                  WEBSITE
                 </span>
-              ))}
-            </div>
-          )}
+                <a
+                  href={project.link}
+                  className="text-jade hover:underline text-sm flex items-center gap-1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {project.link}{' '}
+                  <ExternalLink size={12} />
+                </a>
+              </div>
+            )}
+            {project.platform && (
+              <div className="flex items-center gap-4">
+                <span className="bg-[#E4F2E1] dark:bg-[#2D5A27]/30 text-[#2D5A27] dark:text-[#E4F2E1] px-1.5 py-0.5 rounded-[3px] text-[10px] font-bold uppercase tracking-wider shrink-0 w-20 text-center">
+                  PLATFORM
+                </span>
+                <span className="text-stone-700 dark:text-stone-300 text-sm">
+                  {project.platform}
+                </span>
+              </div>
+            )}
+            {project.stack && (
+              <div className="flex items-center gap-4">
+                <span className="bg-[#E4F2E1] dark:bg-[#2D5A27]/30 text-[#2D5A27] dark:text-[#E4F2E1] px-1.5 py-0.5 rounded-[3px] text-[10px] font-bold uppercase tracking-wider shrink-0 w-20 text-center">
+                  STACK
+                </span>
+                <span className="text-stone-700 dark:text-stone-300 text-sm">
+                  {project.stack}
+                </span>
+              </div>
+            )}
+            {project.source && (
+              <div className="flex items-center gap-4">
+                <span className="bg-[#E4F2E1] dark:bg-[#2D5A27]/30 text-[#2D5A27] dark:text-[#E4F2E1] px-1.5 py-0.5 rounded-[3px] text-[10px] font-bold uppercase tracking-wider shrink-0 w-20 text-center">
+                  SOURCE
+                </span>
+                <a
+                  href={project.source}
+                  className="text-jade hover:underline text-sm flex items-center gap-1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Source Code{' '}
+                  <ExternalLink size={12} />
+                </a>
+              </div>
+            )}
+            {project.blogpost && (
+              <div className="flex items-center gap-4">
+                <span className="bg-[#E4F2E1] dark:bg-[#2D5A27]/30 text-[#2D5A27] dark:text-[#E4F2E1] px-1.5 py-0.5 rounded-[3px] text-[10px] font-bold uppercase tracking-wider shrink-0 w-20 text-center">
+                  BLOGPOST
+                </span>
+                <a
+                  href={project.blogpost}
+                  className="text-jade hover:underline text-sm flex items-center gap-1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Related Article{' '}
+                  <ExternalLink size={12} />
+                </a>
+              </div>
+            )}
+          </div>
         </div>
       </Section>
 
       <Section delay={0.2}>
-        <div className="w-full aspect-video rounded-2xl overflow-hidden shadow-md border border-stone-200 dark:border-stone-700 mb-10">
+        <div className="w-full aspect-video rounded-2xl overflow-hidden shadow-md border border-stone-200 dark:border-white/10 mb-10">
           <img
             src={
               project.thumbnail ||

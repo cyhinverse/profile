@@ -61,14 +61,52 @@ const MarkdownRenderer: React.FC<
               className="border-l-4 border-jade pl-4 italic my-4 text-stone-600 dark:text-stone-400"
             />
           ),
-          a: ({ node, ...props }) => (
-            <a
-              {...props}
-              className="text-jade hover:underline transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            />
-          ),
+          a: ({ node, ...props }) => {
+            const href = props.href || '';
+            const children = props.children;
+
+            // Link Hooks for Styling
+            if (href === '#green') {
+              return (
+                <span className="bg-jade/20 text-jade font-medium rounded px-1">
+                  {children}
+                </span>
+              );
+            }
+            if (href === '#purple') {
+              return (
+                <span className="bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300 font-medium rounded px-1">
+                  {children}
+                </span>
+              );
+            }
+            if (href === '#yellow') {
+              return (
+                <span className="bg-yellow-200 dark:bg-yellow-900/40 text-yellow-800 dark:text-yellow-100 font-medium rounded px-1">
+                  {children}
+                </span>
+              );
+            }
+            if (href === '#underline') {
+              return (
+                <span className="underline decoration-jade decoration-2 underline-offset-2">
+                  {children}
+                </span>
+              );
+            }
+
+            // Standard Link
+            return (
+              <a
+                {...props}
+                className="text-jade hover:underline transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {children}
+              </a>
+            );
+          },
         }}
       >
         {content}

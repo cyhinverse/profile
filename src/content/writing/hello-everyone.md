@@ -6,7 +6,7 @@ summary: Chia sẻ không chỉ là cho đi, mà còn là cách tốt nhất đ�
 
 Chào các bạn,
 
-Chào mừng bạn đến với không gian nhỏ của tôi trên internet. Đây không chỉ là một trang blog kỹ thuật, mà là nơi tôi lưu giữ, hệ thống hóa và chia sẻ những giá trị mình tích lũy được trên hành trình sự nghiệp.
+Chào mừng bạn đến với [không gian nhỏ của tôi trên internet](#green). Đây không chỉ là một trang [blog kỹ thuật](#purple), mà là nơi tôi lưu giữ, [hệ thống hóa](#yellow) và [chia sẻ những giá trị](#yellow) mình tích lũy được trên hành trình sự nghiệp.
 
 Có lẽ bạn sẽ tự hỏi: _"Tại sao lại mất công viết blog trong khi tài liệu trên mạng đã quá nhiều?"_
 
@@ -14,7 +14,7 @@ Với tôi, viết blog mang lại những giá trị mà việc chỉ đơn thu
 
 ## 1. Học sâu hơn qua việc chia sẻ
 
-Tôi luôn tâm đắc với phương pháp học tập **Feynman**: _Nếu bạn không thể giải thích một vấn đề một cách đơn giản, nghĩa là bạn chưa thực sự hiểu nó đủ sâu._
+Tôi luôn tâm đắc với phương pháp học tập **Feynman**: _Nếu bạn không thể [giải thích một vấn đề một cách đơn giản](#underline), nghĩa là bạn [chưa thực sự hiểu nó đủ sâu](#yellow)._
 
 Trong quá trình làm việc, chúng ta thường giải quyết vấn đề dựa trên kinh nghiệm hoặc trực giác. Nhưng khi đặt bút viết (hoặc gõ phím) để giải thích cho người khác, tôi buộc phải:
 
@@ -28,13 +28,13 @@ Mỗi bài viết hoàn thành là một lần tôi tự củng cố nền tản
 
 Ngành công nghệ thay đổi từng ngày. Có những kiến thức, kỹ thuật hôm nay là mới mẻ, nhưng vài tháng sau đã trở thành tiêu chuẩn, hoặc lỗi thời. Trí nhớ con người là hữu hạn, tôi không thể nhớ hết mọi dòng code, mọi giải pháp mình từng triển khai.
 
-Blog này đóng vai trò như một **Second Brain** - một kho lưu trữ được tổ chức bài bản. Nó giúp tôi dễ dàng truy xuất lại những bài học kinh nghiệm (lessons learned), những giải pháp cho các vấn đề hóc búa (troubleshooting) mà tôi đã từng gặp phải. Viết ra cũng là cách để "giải phóng" bộ nhớ não bộ để tập trung vào tư duy sáng tạo hơn.
+Blog này đóng vai trò như một [Second Brain](#green) - một kho lưu trữ được [tổ chức bài bản](#yellow). Nó giúp tôi dễ dàng truy xuất lại những [bài học kinh nghiệm (lessons learned)](#purple), những giải pháp cho các [vấn đề hóc búa (troubleshooting)](#purple) mà tôi đã từng gặp phải. Viết ra cũng là cách để "[giải phóng](#underline)" bộ nhớ não bộ để tập trung vào [tư duy sáng tạo hơn](#yellow).
 
 ## 3. Kết nối và Lan tỏa giá trị
 
 Tôi đã trường thành rất nhiều nhờ cộng đồng. Từ những bài viết hướng dẫn trên Stack Overflow, những repository mã nguồn mở trên GitHub, đến những blog tâm huyết của các tiền bối đi trước.
 
-Viết blog là cách tôi **Pay it forward** - đóng góp ngược lại cho cộng đồng. Tôi tin rằng những vấn đề tôi gặp phải cũng là những vấn đề mà nhiều bạn khác đang loay hoay. Những chia sẻ của tôi, dù nhỏ, hy vọng có thể giúp bạn tiết kiệm thời gian, hoặc gợi mở một góc nhìn mới.
+Viết blog là cách tôi [Pay it forward](#green) - đóng góp ngược lại cho cộng đồng. Tôi tin rằng những vấn đề tôi gặp phải cũng là những vấn đề mà [nhiều bạn khác đang loay hoay](#yellow). Những chia sẻ của tôi, dù nhỏ, hy vọng có thể giúp bạn [tiết kiệm thời gian](#yellow), hoặc [gợi mở một góc nhìn mới](#underline).
 
 Hơn thế nữa, blog là cầu nối tuyệt vời để tôi tìm kiếm những người bạn đồng hành, những người cùng chí hướng để cùng thảo luận và phát triển.
 

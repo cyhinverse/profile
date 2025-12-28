@@ -24,9 +24,9 @@ const translations = {
       'Digital Craftsman ( Software Developer / Student )',
     'home.work_title': 'Work',
     'home.work_desc':
-      'Hello everyone, my name is Anh. I am 21 years old and currently a student at HUTECH University, set to graduate in the 2025–2026 academic year with a major in Information Technology. ' +
-      'My career aspiration is to become a Software Engineering. I am dedicated to addressing various client needs and providing reliable technical solutions through coding. ' +
-      'This is the first blog I have created to share the knowledge and learning experiences I have gained over the past four years. Thank you for visiting my website. I sincerely appreciate your support.',
+      'Hello everyone, my name is [Anh](#green). I am [21 years old](#purple) and currently a student at [HUTECH University](#green), set to graduate in the [2025–2026 academic year](#purple) with a major in [Information Technology](#green). ' +
+      'My career aspiration is to become a [Software Engineering](#green). I am dedicated to [addressing various client needs](#yellow) and [providing reliable technical solutions](#yellow) through coding. ' +
+      'This is the first blog I have created to [share the knowledge](#purple) and [learning experiences](#purple) I have gained over the past four years. Thank you for visiting my website. I sincerely appreciate your [support](#underline).',
     'home.portfolio_btn': 'My Portfolio',
     'home.bio_title': 'Bio',
     'home.born':
@@ -37,7 +37,7 @@ const translations = {
       'Started journey as a Freelance Developer.',
     'home.love_title': 'I ♥',
     'home.love_desc':
-      'Music, Drawing, Calligraphy, Photography.',
+      'Music, [Drawing](#green), Calligraphy, [Photography](#green).',
     'works.title': 'Works',
     'works.read_more': 'View Details',
     'posts.title': 'Writing',
@@ -60,9 +60,9 @@ const translations = {
     'home.role': '数字工匠 ( 开发者 / 学生 )',
     'home.work_title': '工作',
     'home.work_desc':
-      '大家好，我叫 Ying，今年二十一岁，目前仍是 HUTECH 的在校生，即将在 2025–2026 学年从信息技术专业毕业。' +
-      '我的职业理想是成为一名全栈开发工程师。我致力于解决客户各类需求，并以专业的代码能力提供可靠的技术支持。' +
-      '这是我创建的第一个博客，用于分享我四年来的学习经验与知识。感谢各位访问我的网站，谨致谢意。',
+      '大家好，我叫 [Ying](#green)，今年 [二十一岁](#purple)，目前仍是 [HUTECH](#green) 的在校生，即将在 [2025–2026](#purple) 学年从 [信息技术专业](#green) 毕业。' +
+      '我的职业理想是成为一名 [全栈开发工程师](#green)。我致力于 [解决客户各类需求](#yellow)，并以专业的代码能力 [提供可靠的技术支持](#yellow)。' +
+      '这是我创建的第一个博客，用于 [分享我四年来的学习经验与知识](#purple)。感谢各位访问我的网站，[谨致谢意](#underline)。',
     'home.portfolio_btn': '作品集',
     'home.bio_title': '经历',
     'home.born': '出生于越南胡志明市。',
