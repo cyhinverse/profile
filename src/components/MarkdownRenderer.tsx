@@ -37,6 +37,25 @@ const MarkdownRenderer: React.FC<
               className="text-xl font-serif font-bold mt-6 mb-3 text-ink dark:text-stone-100"
             />
           ),
+          strong: ({ node, ...props }) => (
+            <strong
+              {...props}
+              className="font-bold text-cinnabar dark:text-cinnabar-light bg-cinnabar/5 dark:bg-cinnabar/10 px-1 rounded-sm"
+            />
+          ),
+          code: ({ node, ...props }) => {
+            const isInline =
+              !node || !props.className;
+            if (isInline) {
+              return (
+                <code
+                  {...props}
+                  className="bg-stone-100 dark:bg-stone-800 text-cinnabar dark:text-cinnabar-light px-1.5 py-0.5 rounded font-mono text-[0.9em] border border-stone-200 dark:border-stone-700"
+                />
+              );
+            }
+            return <code {...props} />;
+          },
           p: ({ node, ...props }) => (
             <p
               {...props}
@@ -92,6 +111,13 @@ const MarkdownRenderer: React.FC<
                 <span className="underline decoration-jade decoration-2 underline-offset-2">
                   {children}
                 </span>
+              );
+            }
+            if (href === '#highlight') {
+              return (
+                <mark className="bg-yellow-200 dark:bg-yellow-900/40 text-stone-900 dark:text-stone-100 px-1 rounded-sm">
+                  {children}
+                </mark>
               );
             }
 
