@@ -165,22 +165,18 @@ const Resume: React.FC = () => {
                   </span>
                   <span>
                     <span className="font-bold">
-                      Accelerated
+                      Accelerated product creation
                     </span>{' '}
-                    <span>
-                      product creation workflow
-                      for multi-variant items by
-                      60% by implementing a
-                    </span>{' '}
+                    workflow for multi-variant
+                    items by{' '}
                     <span className="font-bold">
-                      Concurrent File Upload
+                      60%
                     </span>{' '}
-                    <span>
-                      mechanism using
-                      Promise-based parallel
-                      processing with the
-                      Cloudinary API.
-                    </span>
+                    by implementing a Concurrent
+                    File Upload mechanism using
+                    Promise-based parallel
+                    processing with the Cloudinary
+                    API.
                   </span>
                 </li>
                 <li className="flex text-[10pt] leading-snug">
@@ -189,27 +185,17 @@ const Resume: React.FC = () => {
                   </span>
                   <span>
                     <span className="font-bold">
-                      Optimized
+                      Optimized retrieval latency
                     </span>{' '}
-                    <span>
-                      data retrieval latency to
-                    </span>{' '}
+                    to{' '}
                     <span className="font-bold">
                       under 10ms
                     </span>{' '}
-                    <span>
-                      for 90% of repeated requests
-                      by implementing a
-                      centralized
-                    </span>{' '}
-                    <span className="font-bold">
-                      Redis Caching
-                    </span>
-                    <span>
-                      {' '}
-                      system with an intelligent
-                      cache invalidation strategy.
-                    </span>
+                    for 90% of repeated requests
+                    by implementing a centralized
+                    Redis Caching system with an
+                    intelligent cache invalidation
+                    strategy.
                   </span>
                 </li>
                 <li className="flex text-[10pt] leading-snug">
@@ -218,29 +204,21 @@ const Resume: React.FC = () => {
                   </span>
                   <span>
                     <span className="font-bold">
-                      Decoupled
+                      Decoupled high-latency tasks
                     </span>{' '}
-                    <span>
-                      high-latency tasks
-                      (Email/Notifications) from
-                      the main request flow,
-                      reducing API response time
-                      by
-                    </span>{' '}
+                    (Email/Notifications) from the
+                    main request flow, reducing
+                    API response time by{' '}
                     <span className="font-bold">
                       40%
                     </span>{' '}
-                    <span>and ensuring</span>{' '}
+                    and ensuring{' '}
                     <span className="font-bold">
                       100% notification delivery
                     </span>{' '}
-                    <span>
-                      during peak traffic via a
-                    </span>{' '}
-                    <span className="font-bold">
-                      RabbitMQ Message Queue
-                      architecture.
-                    </span>
+                    during peak traffic via a
+                    RabbitMQ Message Queue
+                    architecture.
                   </span>
                 </li>
                 <li className="flex text-[10pt] leading-snug">
@@ -249,28 +227,21 @@ const Resume: React.FC = () => {
                   </span>
                   <span>
                     <span className="font-bold">
-                      Optimized
+                      Optimized product discovery
+                      APIs
                     </span>{' '}
-                    <span>
-                      core product discovery APIs
-                      to sustain
-                    </span>{' '}
+                    to sustain{' '}
                     <span className="font-bold">
                       5,000+ Requests Per Second
                       (RPS)
                     </span>{' '}
-                    <span>with</span>{' '}
+                    with{' '}
                     <span className="font-bold">
                       sub-10ms latency
                     </span>{' '}
-                    <span>by implementing</span>{' '}
-                    <span className="font-bold">
-                      multi-layer Redis caching
-                    </span>{' '}
-                    <span>and</span>{' '}
-                    <span className="font-bold">
-                      Node.js process clustering.
-                    </span>
+                    by implementing multi-layer
+                    Redis caching and Node.js
+                    process clustering.
                   </span>
                 </li>
               </ul>
@@ -308,19 +279,10 @@ const Resume: React.FC = () => {
                       immediate revocation
                     </span>{' '}
                     of compromised sessions by
-                    designing a{' '}
-                    <span className="font-bold">
-                      JWT Token Family
-                    </span>{' '}
-                    architecture with{' '}
-                    <span className="font-bold">
-                      automated rotation
-                    </span>{' '}
-                    and{' '}
-                    <span className="font-bold">
-                      family-based reuse detection
-                    </span>
-                    .
+                    designing a JWT Token Family
+                    architecture with automated
+                    rotation and family-based
+                    reuse detection.
                   </span>
                 </li>
                 <li className="flex text-[10pt] leading-snug">
@@ -337,18 +299,10 @@ const Resume: React.FC = () => {
                       optimizing content relevance
                     </span>{' '}
                     via multi-dimensional ranking,
-                    by building a{' '}
-                    <span className="font-bold">
-                      Hybrid Recommendation Engine
-                    </span>{' '}
-                    using{' '}
-                    <span className="font-bold">
-                      Collaborative Filtering
-                    </span>{' '}
-                    and real-time{' '}
-                    <span className="font-bold">
-                      Trending Score
-                    </span>{' '}
+                    by building a Hybrid
+                    Recommendation Engine using
+                    Collaborative Filtering and
+                    real-time trending score
                     calculations.
                   </span>
                 </li>
@@ -358,9 +312,8 @@ const Resume: React.FC = () => {
                   </span>
                   <span className="text-justify">
                     <span className="font-bold">
-                      Optimized system-wide data
-                      integrity and read
-                      performance
+                      Optimized data integrity and
+                      read performance
                     </span>{' '}
                     as measured by{' '}
                     <span className="font-bold">
@@ -368,20 +321,10 @@ const Resume: React.FC = () => {
                       runtime aggregations
                     </span>{' '}
                     for high-traffic feeds, by
-                    implementing{' '}
-                    <span className="font-bold">
-                      ACID Transactions
-                    </span>{' '}
-                    and a{' '}
-                    <span className="font-bold">
-                      Denormalized counter
-                      strategy
-                    </span>{' '}
-                    for{' '}
-                    <span className="font-bold">
-                      constant-time data retrieval
-                    </span>
-                    .
+                    implementing ACID Transactions
+                    and a Denormalized counter
+                    strategy for constant-time
+                    data retrieval.
                   </span>
                 </li>
                 <li className="flex text-[10pt] leading-snug">
@@ -392,21 +335,19 @@ const Resume: React.FC = () => {
                     <span className="font-bold">
                       Reduced initial bundle size
                     </span>{' '}
-                    by ~40% and{' '}
+                    by{' '}
+                    <span className="font-bold">
+                      ~40%
+                    </span>{' '}
+                    and{' '}
                     <span className="font-bold">
                       improved Time to Interactive
                       (TTI)
                     </span>{' '}
-                    by implementing a{' '}
-                    <span className="font-bold">
-                      Granular Code Splitting
-                      strategy
-                    </span>{' '}
-                    with{' '}
-                    <span className="font-bold">
-                      React Lazy/Suspense
-                    </span>
-                    , optimizing delivery for 92+
+                    by implementing a Granular
+                    Code Splitting strategy with
+                    React Lazy/Suspense,
+                    optimizing delivery for 92+
                     unique components.
                   </span>
                 </li>
@@ -436,24 +377,18 @@ const Resume: React.FC = () => {
                   </span>
                   <span className="text-justify">
                     <span className="font-bold">
-                      Designed
+                      Designed a backend
                     </span>{' '}
-                    a backend with{' '}
+                    with FastAPI using the
+                    Service-Repository pattern,
+                    which{' '}
                     <span className="font-bold">
-                      FastAPI
+                      organized the code into
+                      clear layers
                     </span>{' '}
-                    using the{' '}
-                    <span className="font-bold">
-                      Service-Repository pattern
-                    </span>
-                    , which organized the code
-                    into clear layers and made it
-                    much easier to{' '}
-                    <span className="font-bold">
-                      add new features
-                    </span>{' '}
-                    without breaking existing
-                    ones.
+                    and made it much easier to add
+                    new features without breaking
+                    existing ones.
                   </span>
                 </li>
                 <li className="flex text-[10pt] leading-snug">
@@ -462,16 +397,12 @@ const Resume: React.FC = () => {
                   </span>
                   <span className="text-justify">
                     <span className="font-bold">
-                      Organized
+                      Organized the project
                     </span>{' '}
-                    the project into a{' '}
-                    <span className="font-bold">
-                      modular, feature-based
-                      structure
-                    </span>
-                    , making the codebase clean
-                    and easy to navigate for the
-                    team while{' '}
+                    into a modular, feature-based
+                    structure, making the codebase
+                    clean and easy to navigate for
+                    the team while{' '}
                     <span className="font-bold">
                       significantly reducing merge
                       conflicts
@@ -504,20 +435,19 @@ const Resume: React.FC = () => {
                     •
                   </span>
                   <span className="text-justify">
-                    Designed system using{' '}
                     <span className="font-bold">
-                      Layered Architecture
-                      (3-Tier)
+                      Designed system
                     </span>{' '}
-                    and implemented
-                    industry-standard{' '}
+                    using Layered Architecture
+                    (3-Tier) and implemented
+                    industry-standard Design
+                    Patterns (Repository,
+                    Singleton, Factory) to{' '}
                     <span className="font-bold">
-                      Design Patterns
-                    </span>{' '}
-                    (Repository, Singleton,
-                    Factory) to enhance
-                    maintainability and code
-                    reusability.
+                      enhance maintainability and
+                      code reusability
+                    </span>
+                    .
                   </span>
                 </li>
                 <li className="flex text-[10pt] leading-snug">
@@ -525,19 +455,17 @@ const Resume: React.FC = () => {
                     •
                   </span>
                   <span className="text-justify">
-                    Optimized data performance
-                    through{' '}
                     <span className="font-bold">
-                      Mongoose Aggregation
-                      Framework
+                      Optimized data performance
                     </span>{' '}
-                    and advanced{' '}
+                    through Mongoose Aggregation
+                    Framework and advanced
+                    Indexing strategies for large
+                    datasets, ensuring{' '}
                     <span className="font-bold">
-                      Indexing strategies
+                      near-instant retrieval
                     </span>{' '}
-                    for large datasets, ensuring
-                    near-instant retrieval of
-                    business intelligence (BI)
+                    of business intelligence (BI)
                     reports.
                   </span>
                 </li>
@@ -546,25 +474,22 @@ const Resume: React.FC = () => {
                     •
                   </span>
                   <span className="text-justify">
-                    Engineered secure{' '}
                     <span className="font-bold">
-                      RESTful APIs
+                      Engineered secure RESTful
+                      APIs
                     </span>{' '}
-                    featuring{' '}
-                    <span className="font-bold">
-                      Dual-Token JWT
-                    </span>{' '}
+                    featuring Dual-Token JWT
                     (Access/Refresh)
-                    authentication, fine-grained{' '}
+                    authentication,{' '}
                     <span className="font-bold">
-                      RBAC
+                      fine-grained RBAC
                     </span>
-                    , and defensive layers against
-                    Brute-force/DDoS using{' '}
+                    , and{' '}
                     <span className="font-bold">
-                      Rate Limiting
-                    </span>
-                    .
+                      defensive layers
+                    </span>{' '}
+                    against Brute-force/DDoS using
+                    Rate Limiting.
                   </span>
                 </li>
               </ul>
@@ -588,11 +513,11 @@ const Resume: React.FC = () => {
                 </span>
                 <span className="mx-1">|</span>
                 <span className="italic">
-                  Founder & Technical Lead
+                  Technical Lead
                 </span>
               </div>
               <span className="font-bold text-[10pt]">
-                Jun 2023 – Present
+                Oct 2025 – Present
               </span>
             </div>
             <ul className="list-none space-y-0.5">
@@ -604,20 +529,12 @@ const Resume: React.FC = () => {
                   <span className="font-bold">
                     Designed and implemented
                   </span>{' '}
-                  an advanced{' '}
+                  an advanced RAG architecture,
+                  developing a robust system that
+                  significantly{' '}
                   <span className="font-bold">
-                    RAG
-                  </span>{' '}
-                  architecture, developing a
-                  <span className="font-bold">
-                    {' '}
-                    robust system
-                  </span>{' '}
-                  that significantly improved
-                  <span className="font-bold">
-                    {' '}
-                    domain-specific response
-                    accuracy
+                    improved domain-specific
+                    response accuracy
                   </span>
                   .
                 </span>
@@ -630,11 +547,9 @@ const Resume: React.FC = () => {
                   <span className="font-bold">
                     Led the transition
                   </span>{' '}
-                  from synchronous to{' '}
-                  <span className="font-bold">
-                    SSE Streaming architecture
-                  </span>
-                  , resulting in a{' '}
+                  from synchronous to SSE
+                  Streaming architecture,
+                  resulting in a{' '}
                   <span className="font-bold">
                     95% reduction in perceived
                     user latency
@@ -652,20 +567,10 @@ const Resume: React.FC = () => {
                     Developed core infrastructure
                   </span>{' '}
                   for a SaaS business model,
-                  designing a{' '}
-                  <span className="font-bold">
-                    Multi-tenancy architecture
-                  </span>{' '}
-                  and{' '}
-                  <span className="font-bold">
-                    integrating
-                  </span>{' '}
-                  the{' '}
-                  <span className="font-bold">
-                    MCP
-                  </span>{' '}
-                  to standardize intelligent tool
-                  integrations.
+                  designing a Multi-tenancy
+                  architecture and integrating the
+                  MCP to standardize intelligent
+                  tool integrations.
                 </span>
               </li>
             </ul>
