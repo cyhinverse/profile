@@ -104,6 +104,26 @@ const WorkDetail: React.FC = () => {
                 </a>
               </div>
             )}
+            {project['Current Status'] && (
+              <div className="flex items-center gap-4">
+                <span className="bg-[#E4F2E1] dark:bg-[#2D5A27]/30 text-[#2D5A27] dark:text-[#E4F2E1] px-1.5 py-0.5 rounded-[3px] text-[10px] font-bold uppercase tracking-wider shrink-0 w-20 text-center">
+                  STATUS
+                </span>
+                <span className="text-stone-700 dark:text-stone-300 text-sm">
+                  {project['Current Status']}
+                </span>
+              </div>
+            )}
+            {project['Role'] && (
+              <div className="flex items-center gap-4">
+                <span className="bg-[#E4F2E1] dark:bg-[#2D5A27]/30 text-[#2D5A27] dark:text-[#E4F2E1] px-1.5 py-0.5 rounded-[3px] text-[10px] font-bold uppercase tracking-wider shrink-0 w-20 text-center">
+                  ROLE
+                </span>
+                <span className="text-stone-700 dark:text-stone-300 text-sm">
+                  {project['Role']}
+                </span>
+              </div>
+            )}
             {project.platform && (
               <div className="flex items-center gap-4">
                 <span className="bg-[#E4F2E1] dark:bg-[#2D5A27]/30 text-[#2D5A27] dark:text-[#E4F2E1] px-1.5 py-0.5 rounded-[3px] text-[10px] font-bold uppercase tracking-wider shrink-0 w-20 text-center">
