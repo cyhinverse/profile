@@ -8,6 +8,8 @@ link: https://yibu.app
 platform: Web / Mobile
 stack: Vite, React, NodeJs, Redis, MongoDB
 source: https://github.com/cyhinverse/YiBu
+Current Status: Currently under development
+Role: Full Stack Developer
 ---
 
 YIBU is a visual-centric social platform focused on discovery and real-time engagement, featuring a sophisticated recommendation system and enterprise-grade security.

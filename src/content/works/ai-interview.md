@@ -9,6 +9,8 @@ link: https://agent-interview-client.vercel.app/
 platform: Web / Dashboard
 stack: NextJs, FastAPI, PostgreSQL, Pipecat, AWS S3
 source: https://github.com/cyhinverse/agent_interview_client
+Current Status: Currently under development
+Role: Full Stack Developer
 ---
 
 A high-performance AI-driven platform for automated interview processing, utilizing real-time voice and text analysis to streamline recruitment workflows.

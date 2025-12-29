@@ -19,7 +19,7 @@ const translations = {
     'nav.posts': 'Writing',
     'nav.resume': 'Resume',
     'home.greeting':
-      "Hello, I'm an indie developer based in Vietnam :>",
+      'The technology of the future, the intelligence of tomorrow.',
     'home.role':
       'Digital Craftsman ( Software Developer / Student )',
     'home.work_title': 'Work',

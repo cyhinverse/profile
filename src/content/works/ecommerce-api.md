@@ -8,6 +8,8 @@ link: etiso.me
 platform: Web / API
 stack: NodeJs, MongoDB, Redis, RabbitMQ, Cloudinary
 source: https://github.com/cyhinverse/client-ecommerce
+Current Status: Currently under development
+Role: Full Stack Developer
 ---
 
 A robust and scalable e-commerce backend designed to handle high-traffic peak loads while ensuring data integrity and low-latency responses.
