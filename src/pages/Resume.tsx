@@ -599,7 +599,7 @@ const Resume: React.FC = () => {
               </span>{' '}
               AWS(S3 | EC2 | Lambda | API
               Gateway), Postman, Git, GitHub,
-              Docker
+              Docker, Redis
             </p>
             <p>
               <span className="font-bold">
