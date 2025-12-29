@@ -19,7 +19,7 @@ const translations = {
     'nav.posts': 'Writing',
     'nav.resume': 'Resume',
     'home.greeting':
-      'The technology of the future, the intelligence of tomorrow.',
+      'Today’s technology, tomorrow’s intelligence.',
     'home.role':
       'Digital Craftsman ( Software Developer / Student )',
     'home.work_title': 'Work',
